@@ -1,0 +1,101 @@
+<div
+  class="flex bg-white rounded-xl w-xxxl absolute shadow-2xl p-16 text-neutral-1-900 gap-20 font-Inter font-medium top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+  <div class="w-1/2">
+    <img src="../../../../assets/Waiting Approve 2.png" alt="" />
+  </div>
+  <div class="w-1/2 h-xlx border border-neutral-2-200 p-8 shadow-md flex flex-col font-Inter overflow-y-auto">
+    <div class="text-center text-heading-2 mb-8">Đăng kí shop mới</div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Tên shop </label>
+        &nbsp;
+        <span class="text-red-600 flex items-center">*</span>
+      </div>
+      <input type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter font-normal bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Nhập tên shop" />
+    </div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Tỉnh thành</label>
+        &nbsp;
+      </div>
+
+      <select type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Nhập tên shop">
+        <option selected>Chọn tỉnh thành</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Quận huyện</label>
+        &nbsp;
+      </div>
+      <select type="username"
+        class="form-control block w-full px-3 py-2.5 text-neutral-1-400 text-body-1 font-Inter font-normal bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Chọn quận huyện">
+        <option selected>Chọn quận huyện</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Phường xã</label>
+        &nbsp;
+      </div>
+      <select type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Nhập tên shop">
+        <option selected>Chọn phường xã</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Địa chỉ</label>
+        &nbsp;
+        <span class="text-red-600 flex items-center">*</span>
+      </div>
+      <input type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Số nhà, tên đường thôn/ấp" />
+    </div>
+    <div class="form-group w-full mb-6">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Địa chỉ email</label>
+        &nbsp;
+      </div>
+      <select type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter text-neutral-1-400 text-body-1 font-normal bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Nhập email liên hệ của shop">
+        <option selected>Chọn tỉnh thành</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group w-full mb-9">
+      <div class="flex justify-start items-center">
+        <label class="font-medium text-body-2 mb-2">Số điện thoại</label>
+        &nbsp;
+        <span class="text-red-600 flex items-center">*</span>
+      </div>
+      <input type="username"
+        class="form-control block w-full px-3 py-2.5 font-Inter font-normal bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-neutral-1-400 focus:bg-white focus:border-primary-1 focus:outline-none"
+        placeholder="Nhập số điện thoại liên hệ của shop" />
+    </div>
+
+    <button [routerLink]="['/tai-khoan/dang-nhap']"
+      class="w-full bg-primary-1 text-white text-center py-2 rounded-md text-title-1">
+      Đăng nhập
+    </button>
+  </div>
+</div>
