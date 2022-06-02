@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   host: { class: 'h-full flex flex-col overflow-hidden ' },
 })
 export class SettingMessageComponent implements OnInit {
-  show = true;
+  show: boolean = false;
+  clickEvent() {
+    this.show = !this.show;
+  }
   showadd = true;
   constructor() { }
 

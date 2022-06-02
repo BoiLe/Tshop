@@ -1,4 +1,4 @@
-<div class="h-full w-full flex flex-col overflow-hidden">
+<div class="h-full w-full flex flex-col overflow-hidden font-Inter">
   <div class="py-2.5 px-4 border-b-2  h-lgx">
     <div class="text-caption-1 font-regular text-neutral-1-400">
       <button [routerLink]="['/nhan-tin/chat']" class="">Trò truyện</button>
@@ -17,14 +17,14 @@
             id="basic-addon2">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="currentColor"
+              <path fill="#858F9B"
                 d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
               </path>
             </svg>
           </span>
           <input type="search"
-            class="relative flex-auto h-md w-full block pl-10 py-2 text-base font-normal text-gray-700 bg-neutral-3-100 g-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-1 focus:outline-none"
-            placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
+            class="relative flex-auto h-md w-full block pl-10 py-2 text-base font-normal text-neutral-1-400 bg-white  border border-neutral-2-200   rounded  focus:text-gray-700  focus:border-primary-1 focus:outline-none"
+            placeholder="Search" />
         </div>
         <button>
           <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,15 +42,13 @@
       </div>
       <!-- chossen -->
       <div class="w-full py-2.5 px-2 border-b-2 h-16">
-        <div class="flex items-center">
-          <div class="flex items-center w-3/5">
+        <div class="flex items-center gap-x-2">
+          <div class="flex items-center w-3/5 gap-x-2">
             <div class="">
-              <input class="h-4 w-4   text-green-600 rounded-sm    bg-no-repeat bg-center bg-contain  mr-2 "
-                type="checkbox" value="" />
+              <input class="h-4 w-4    rounded-sm " type="checkbox" value="" />
             </div>
-
             <button type="username"
-              class="flex justify-around items-center mr-2 h-full w-full px-3 py-2 font-Inter font-normal text-white text-body-2 bg-primary-1 bg-clip-padding border rounded-lg transition">
+              class="flex justify-around items-center h-full w-full px-3 py-2 font-Inter font-normal text-white text-body-2 bg-primary-1 bg-clip-padding border rounded-lg transition">
               Thao tác
               <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -61,7 +59,7 @@
           </div>
           <div class="font-medium w-3/5">
             <button type="username"
-              class="flex justify-between items-center mr-2 h-full w-full px-3 py-2 font-Inter font-medium text-neutral-1-900 text-body-2 bg-clip-padding border rounded-lg transition">
+              class="flex justify-between items-center mr-2 h-full w-full px-3 py-2 font-Inter font-medium text-neutral-1-900 text-body-2 bg-clip-padding border border-neutral-2-200 rounded-lg ">
               Theo tin nhắn mới
               <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -74,15 +72,15 @@
       </div>
       <!-- chat -->
       <div class="w-full h-full overflow-hidden overflow-y-auto">
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -98,15 +96,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -122,15 +120,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -146,15 +144,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -170,15 +168,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -194,15 +192,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -218,15 +216,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -242,15 +240,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -266,15 +264,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -290,15 +288,15 @@
             </div>
           </div>
         </div>
-        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2">
+        <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
               <img src="../../../../assets/Avatar.png" alt="" />
             </div>
-            <div class="flex justify-between">
-              <div class="text-neutral-1-900 flex flex-col justify-between">
-                <div class="text-body-2 font-medium">Nguyen Van Huy</div>
-                <div class="text-caption-1 font-normal">
+            <div class="flex justify-between hover:text-neutral-1-900">
+              <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
+                <div class="text-body-2 font-medium text-neutral-1-900 ">Nguyen Van Huy</div>
+                <div class="text-caption-1 font-normal text-neutral-1-400 hover:text-neutral-1-900">
                   Hello AD, cho hỏi sản phẩm áo thun này còn không?
                 </div>
               </div>
@@ -314,6 +312,8 @@
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
     <!-- chat window -->
@@ -362,7 +362,7 @@
       </div>
       <!-- body  -->
       <div class="py-2 flex flex-col bg-neutral-3-200 h-full overflow-auto">
-        <div class="text-caption-2 font-regular w-full py-2 text-center">
+        <div class="text-caption-2 font-regular text-neutral-1-400 w-full py-2 text-center">
           Thứ 2, 14-02-2020
         </div>
         <!-- take mesage -->
@@ -371,10 +371,11 @@
             <img class="w-9 h-9" src="../../../../assets/Avatar.png" alt="" />
           </div>
           <div class="flex flex-col h-full justify-between">
-            <div class="text-body-2 font-regular font-normal px-4 py-2 bg-white mb-1 rounded-b-xl rounded-r-xl">
+            <div
+              class="text-body-2 text-neutral-1-900 font-regular font-normal px-4 py-2 bg-white mb-1 rounded-b-xl rounded-r-xl">
               Shop ơi cho hỏi sản phẩm này hiện tại bên mình còn không ạ, em mua
             </div>
-            <div class="text-caption-2 font-regular font-normal">16:20</div>
+            <div class="text-caption-2 font-regular font-normal text-neutral-1-400">16:20</div>
           </div>
         </div>
         <!-- give mesage -->
@@ -384,7 +385,7 @@
               class="text-body-2 font-regular font-normal px-4 py-2 bg-primary-1 text-white mb-1 rounded-t-xl rounded-l-xl">
               Shop ơi cho hỏi sản phẩm này hiện tại bên mình còn không ạ, em mua
             </div>
-            <div class="text-caption-2 font-regular font-normal">16:20</div>
+            <div class="text-caption-2 font-regular font-normal text-neutral-1-400">16:20</div>
           </div>
         </div>
         <div class="flex justify-end items-end px-4 py-2">
@@ -397,7 +398,7 @@
               </button>
             </div>
 
-            <div class="text-caption-2 font-regular font-normal">16:20</div>
+            <div class="text-caption-2 font-regular font-normal text-neutral-1-400">16:20</div>
           </div>
         </div>
         <div class="flex justify-end items-end px-4 py-2">
@@ -634,13 +635,13 @@
       </div>
       <div class="bg-white h-40 p-4">
         <div class="h-16 mb-1 w-full">
-          <textarea class="resize-none w-full h-full focus:outline-none font-regular text-body-2"
+          <textarea class="resize-none w-full h-full text-neutral-1-700 focus:outline-none font-regular text-body-2"
             placeholder="Nhập nội dung tin nhắn"></textarea>
         </div>
         <div class="flex justify-between">
           <ul class="flex">
             <li>
-              <button class="p-2.5">
+              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M4.79175 8.00846V16.0501L2.70841 16.0751V8.00846H4.79175ZM5.35008 6.9668H2.70841C2.43341 6.9668 2.16675 7.07513 1.97508 7.2668C1.77508 7.45013 1.66675 7.70846 1.66675 7.97513V16.0668C1.66675 16.3335 1.77508 16.5918 1.97508 16.7835C2.16675 16.9751 2.43341 17.0835 2.70841 17.0835H5.35008C5.61675 17.0835 5.83341 16.8668 5.83341 16.6001V7.4418C5.83341 7.18346 5.61675 6.9668 5.35008 6.9668Z"
@@ -652,7 +653,7 @@
               </button>
             </li>
             <li>
-              <button class="p-2.5">
+              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.1182 3.00054H4.08398C3.54486 2.98844 3.02289 3.19041 2.63232 3.56224C2.24176 3.93407 2.01441 4.44548 2 4.98454V15.4725C2.01415 16.0117 2.24145 16.5233 2.63208 16.8951C3.02271 17.267 3.54479 17.4689 4.08398 17.4565H15.1182C15.6574 17.4689 16.1794 17.267 16.5701 16.8951C16.9607 16.5233 17.188 16.0117 17.2021 15.4725V4.98454C17.188 4.44539 16.9607 3.93382 16.5701 3.56194C16.1794 3.19005 15.6574 2.98818 15.1182 3.00054ZM16.1541 15.4725C16.147 15.74 16.0341 15.9937 15.8403 16.1782C15.6465 16.3626 15.3876 16.4627 15.1201 16.4565H4.08594C3.81846 16.4627 3.55954 16.3626 3.36572 16.1782C3.17191 15.9937 3.05908 15.74 3.052 15.4725V13.1235C3.06398 13.1098 3.07743 13.0974 3.09204 13.0865C3.77604 12.5725 4.44302 12.0635 5.07202 11.5725C5.10427 11.5429 5.14532 11.5246 5.18896 11.5205C5.23782 11.5261 5.28363 11.5475 5.31909 11.5815C5.97309 12.0815 6.67201 12.6175 7.58301 13.3085C7.69128 13.3963 7.82575 13.4455 7.96509 13.4485C8.13074 13.4432 8.28782 13.3736 8.40308 13.2545C9.66208 12.0545 10.9639 10.8165 12.2729 9.56854C12.3038 9.53685 12.333 9.50346 12.3601 9.46854L12.3811 9.44254L12.407 9.46353C12.437 9.48853 12.4612 9.50754 12.4832 9.52854L12.7151 9.74954C13.8421 10.8225 15.0081 11.9325 16.1531 13.0265L16.1541 15.4725ZM16.1541 11.4445L16.1479 11.4385L12.877 8.32454C12.7535 8.18985 12.5825 8.10875 12.4001 8.09854C12.2198 8.10862 12.0503 8.18861 11.928 8.32154C10.783 9.41053 9.42814 10.7015 8.04614 12.0215C8.01485 12.0537 7.98759 12.0897 7.96509 12.1285L7.94702 12.1555L7.69116 11.9555L7.13501 11.5315L6.70508 11.2035C6.33308 10.9195 5.94909 10.6265 5.56909 10.3405C5.46515 10.258 5.3368 10.2123 5.2041 10.2105C5.05084 10.2147 4.90343 10.27 4.78516 10.3675C4.35916 10.6925 3.94009 11.0095 3.49609 11.3455L3.05298 11.6805V4.98053C3.06005 4.71308 3.17289 4.45933 3.3667 4.27489C3.56051 4.09045 3.81968 3.99036 4.08716 3.99654H15.1211C15.3886 3.99036 15.6475 4.09045 15.8413 4.27489C16.0351 4.45933 16.148 4.71308 16.155 4.98053L16.1541 11.4445Z"
@@ -664,7 +665,7 @@
               </button>
             </li>
             <li>
-              <button class="p-2.5">
+              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M18 9.99908C18.0002 11.5831 17.5301 13.1315 16.6494 14.4481C15.7687 15.7647 14.5169 16.7902 13.0527 17.3946C11.5886 17.9991 9.97793 18.1553 8.42492 17.8435C6.87191 17.5316 5.44642 16.7657 4.32912 15.6429C3.21182 14.5201 2.4531 13.0908 2.14891 11.5363C1.84472 9.98179 2.00884 8.37195 2.62051 6.9108C3.23218 5.44965 4.26378 4.20298 5.5847 3.32876C6.90562 2.45453 8.45628 1.99211 10.0403 2.0001C12.1547 2.01132 14.1787 2.85892 15.6702 4.35771C17.1616 5.85651 17.9992 7.88467 18 9.99908ZM9.99794 16.8573C11.3525 16.8573 12.6767 16.456 13.8035 15.7041C14.9302 14.9522 15.809 13.8833 16.3289 12.6325C16.8488 11.3816 16.9864 10.0048 16.7246 8.67572C16.4627 7.34668 15.813 6.12499 14.8575 5.16484C13.902 4.20468 12.6834 3.5491 11.3556 3.28083C10.0279 3.01256 8.65041 3.14362 7.39705 3.65747C6.1437 4.17131 5.07065 5.04491 4.31332 6.16803C3.55599 7.29115 3.14832 8.61345 3.14177 9.96803C3.13686 10.8713 3.31065 11.7667 3.65305 12.6026C3.99546 13.4385 4.49966 14.1984 5.13686 14.8387C5.77405 15.479 6.5316 15.9869 7.36584 16.3333C8.20008 16.6798 9.09463 16.8578 9.99794 16.8573Z"
@@ -682,7 +683,7 @@
               </button>
             </li>
             <li>
-              <button class="p-2.5">
+              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.89877 15.4731C2.67792 15.4492 2.47953 15.4403 2.28488 15.4055C1.92384 15.3046 1.6034 15.082 1.37171 14.7712C1.14003 14.4604 1.00957 14.0781 1 13.6819C1.02121 10.9765 1.02121 8.27114 1 5.56573C1.01388 5.17385 1.14296 4.79641 1.3692 4.4864C1.59544 4.17639 1.90738 3.94938 2.26135 3.83719C2.42154 3.79762 2.58534 3.77695 2.74981 3.77559C6.12489 3.77559 9.50004 3.77559 12.8751 3.77559C12.9689 3.78416 13.063 3.76284 13.1454 3.71435C13.2277 3.66587 13.2945 3.59243 13.3373 3.50341C13.6163 3.01564 14.0158 2.61825 14.4924 2.35435C14.969 2.09044 15.5045 1.97007 16.041 2.00631C16.6448 2.00281 17.2345 2.19983 17.7277 2.56981C18.2209 2.93978 18.5927 3.46419 18.7912 4.06963C19.0549 4.78586 19.0693 5.57843 18.8319 6.30494C18.5945 7.03146 18.1209 7.64432 17.496 8.03339C17.4432 8.06122 17.3997 8.10554 17.3713 8.16041C17.3429 8.21528 17.3309 8.27806 17.337 8.34034C17.3417 10.1096 17.3249 11.8799 17.3464 13.6492C17.3316 14.1218 17.1485 14.5709 16.8342 14.906C16.5199 15.2411 16.0977 15.4374 15.6526 15.4552C13.0838 15.4254 10.515 15.4443 7.94532 15.4552C7.82454 15.4575 7.70627 15.4916 7.60102 15.5545C6.33396 16.3274 5.06944 17.1056 3.80737 17.8891C3.61944 17.9985 3.39947 18.0283 3.19166 17.9725C3.10905 17.9583 3.034 17.9127 2.98079 17.8441C2.92757 17.7755 2.89976 17.6888 2.90242 17.6C2.90242 17.0086 2.90242 16.4168 2.90242 15.8247C2.89868 15.7145 2.89877 15.5992 2.89877 15.4731ZM3.91018 16.4287C3.9944 16.3821 4.04792 16.3552 4.09752 16.3235C5.09694 15.7105 6.09432 15.0946 7.09749 14.4876C7.21465 14.4154 7.34684 14.3748 7.48222 14.3694C8.8859 14.3585 10.2896 14.3585 11.6933 14.3565C12.9257 14.3565 14.1581 14.3485 15.3905 14.3565C15.5133 14.3567 15.635 14.3306 15.7481 14.2799C15.8612 14.2291 15.9633 14.1547 16.0487 14.0611C16.1341 13.9674 16.2011 13.8565 16.2452 13.7349C16.2893 13.6132 16.3099 13.4834 16.3057 13.3531C16.2973 11.7885 16.3057 10.2238 16.3057 8.65921V8.4198C15.8475 8.4978 15.3785 8.45933 14.937 8.30754C14.4955 8.15575 14.094 7.89495 13.7659 7.54659C13.4411 7.20076 13.1962 6.77987 13.0501 6.3168C12.904 5.85373 12.8607 5.36105 12.9238 4.8773H12.6786C9.48261 4.8773 6.28677 4.8773 3.09136 4.8773C2.94792 4.8595 2.80256 4.87646 2.66619 4.92696C2.52982 4.97745 2.4062 5.06014 2.3043 5.16879C2.20241 5.27744 2.12486 5.40923 2.07789 5.55421C2.03093 5.69919 2.01571 5.85361 2.03312 6.00581C2.05651 7.05784 2.03301 8.11087 2.03769 9.1639C2.03769 10.5964 2.03776 12.0299 2.04431 13.4624C2.04427 13.6965 2.13056 13.9212 2.28488 14.0884C2.4392 14.2555 2.64932 14.3518 2.86975 14.3565C3.06908 14.3684 3.26923 14.3565 3.46856 14.3634C3.52864 14.3565 3.58937 14.3641 3.6463 14.3856C3.70323 14.4072 3.75486 14.442 3.79732 14.4877C3.83978 14.5333 3.87213 14.5886 3.89167 14.6493C3.91122 14.71 3.91743 14.7746 3.91018 14.8383C3.91111 15.3529 3.90927 15.8704 3.90927 16.4317L3.91018 16.4287ZM15.9304 7.33104C16.4459 7.31966 16.9377 7.09902 17.3046 6.71449C17.6715 6.32996 17.8858 5.81075 17.9032 5.26372C17.9054 4.9893 17.8566 4.71712 17.7597 4.46269C17.6628 4.20826 17.5196 3.9766 17.3384 3.7809C17.1572 3.58519 16.9415 3.4293 16.7035 3.32211C16.4655 3.21493 16.2101 3.15854 15.9516 3.15619C15.6931 3.15384 15.4367 3.20557 15.197 3.30841C14.9573 3.41126 14.7391 3.5632 14.5548 3.75558C14.3704 3.94796 14.2235 4.17701 14.1225 4.42964C14.0216 4.68227 13.9685 4.95356 13.9663 5.22797C13.9724 5.7804 14.1804 6.30871 14.5463 6.70158C14.9122 7.09444 15.4074 7.32118 15.9276 7.33401L15.9304 7.33104Z"
@@ -694,7 +695,7 @@
               </button>
             </li>
             <li>
-              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full focus:bg-transparent">
+              <button class="p-2.5 hover:bg-neutral-1-200 rounded-full ">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.2322 18L3.28081 14.6424C3.19683 14.6019 3.126 14.5385 3.07635 14.4596C3.02669 14.3806 3.00018 14.2893 3 14.1961V5.81655C3.00238 5.7253 3.02993 5.63646 3.07966 5.55991C3.12938 5.48336 3.19935 5.42208 3.28175 5.38281L10.1559 2.04843C10.224 2.01645 10.2983 1.9999 10.3736 2C10.4479 2.00001 10.5212 2.01656 10.5884 2.04843L17.4015 5.35569C17.4699 5.37297 17.5336 5.40498 17.5883 5.44947C17.643 5.49395 17.6872 5.54985 17.718 5.61324C17.7355 5.65308 17.7488 5.6946 17.7578 5.73716H17.7665L17.7762 5.83398V14.197C17.7761 14.2906 17.7497 14.3822 17.7001 14.4615C17.6504 14.5407 17.5795 14.6044 17.4954 14.6453L10.5449 17.9778L10.4123 17.9981H10.3755L10.2322 18ZM9.87317 16.7472V9.48593L3.99134 6.6395V13.8862L9.87317 16.7472ZM10.8714 16.7365L16.7771 13.8679V6.60659L14.5271 7.70059V9.98354C14.5214 10.1119 14.4664 10.2331 14.3736 10.3218C14.2809 10.4106 14.1575 10.4602 14.029 10.4602C13.9006 10.4602 13.777 10.4106 13.6842 10.3218C13.5914 10.2331 13.5364 10.1119 13.5308 9.98354V8.18663L10.8723 9.47526L10.8714 16.7365ZM10.4173 8.6378L13.0041 7.34625L7.25891 4.56083L4.63237 5.83398L10.4173 8.6378ZM14.1862 6.81181L16.1226 5.8359L10.3764 3.04756L8.40247 4.00702L14.1862 6.81181Z"
@@ -717,10 +718,14 @@
     <div class="w-2/5 flex flex-col">
       <!-- tab menu message -->
       <div class="flex w-full text-body-2 font-medium border-b-2 mb-2">
-        <button (click)="show = true" class="px-20 py-m w-1/2">
+        <button (click)="clickEvent()"
+          [ngClass]="show ? 'border-primary-1 bg-white text-neutral-1-900' : 'bg-neutral-3-50 text-neutral-1-300'"
+          class="px-20 border-b-3 border-transparent  py-m w-1/2  ">
           Khách hàng
         </button>
-        <button (click)="show = false" class="px-20 py-m w-1/2 bg-neutral-3-50">
+        <button (click)="clickEvent()"
+          [ngClass]="!show ? 'border-primary-1 bg-white text-neutral-1-900' : 'bg-neutral-3-50 text-neutral-1-300'"
+          class="px-20 border-b-3 border-transparent  py-m w-1/2 ">
           Đơn hàng
         </button>
       </div>
@@ -748,7 +753,7 @@
             </div>
             <div class="mr-2 flex w-full justify-between items-center">
               <button type="username"
-                class="flex justify-between items-center truncate block w-full pl-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding appearance-none rounded focus:text-neutral-1-500 focus:bg-white focus:outline-none">
+                class="flex justify-between items-center truncate block w-full pl-3 py-2.5 font-Inter font-normal  text-body-1 bg-white bg-clip-padding appearance-none rounded text-neutral-1-900 focus:bg-white focus:outline-none">
                 THÔNG TIN KHÁCH HÀNG
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -768,9 +773,9 @@
               </div>
               <div class="flex flex-col">
                 <div class="mb-1">
-                  <span> Nguyễn Văn Huy </span>
-                  <span> - </span>
-                  <span>MH124214</span>
+                  <span class="text-title-1 font-medium text-neutral-1-900"> Nguyễn Văn Huy </span>
+                  <span class="text-title-1 font-medium text-neutral-1-900"> - </span>
+                  <span class="text-primary-1 text-title-1 font-medium">MH124214</span>
                 </div>
                 <div class="flex items-center justify-start">
                   <div class="mr-1">
@@ -780,11 +785,11 @@
                         fill="#FF6720" />
                     </svg>
                   </div>
-                  <div>1000</div>
+                  <div class="text-body-2 font-regular text-neutral-1-900">1000</div>
                 </div>
               </div>
             </div>
-            <div class="w-full flex flex-col mb-3 pr-4">
+            <div class="w-full flex flex-col mb-3 pr-4 text-neutral-1-900 text-body-2 font-regular">
               <div class="w-full flex text-body-2 text-neutral-1-900 font-regular mb-4">
                 <div class="w-1/2 flex">
                   <div class="flex">
@@ -860,7 +865,7 @@
               </svg>
             </div>
             <button type="username"
-              class="flex justify-between items-center w-full mr-2 h-full w-full font-Inter font-medium text-neutral-1-900 text-body-2 bg-clip-padding rounded-lg transition">
+              class="flex justify-between items-center w-full mr-2 h-full w-full font-Inter font-medium text-neutral-1-900 text-body-2 rounded-lg ">
               GHI CHÚ
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -875,12 +880,13 @@
               class="mr-2 block w-full px-3 py-1.5 text-body-2 font-regular text-neutral-1-400 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-1 focus:outline-none"
               placeholder="Nhập ghi chú" />
             <button
-              class="flex justify-between flex-row-reverse items-center mr-2 w-1/3 px-3 py-2 font-Inter font-medium text-body-2 text-white bg-primary-1 bg-clip-padding border rounded-md transition">
-              <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              class="flex justify-center  items-center gap-y-2 w-1/3 px-3 py-2 font-Inter font-medium text-body-2 text-white bg-primary-1 bg-clip-padding border rounded-md transition">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M5.46687 8.125L10.0694 12.9813C10.113 13.0272 10.1656 13.0637 10.2238 13.0887C10.2821 13.1137 10.3448 13.1266 10.4081 13.1266C10.4715 13.1266 10.5342 13.1137 10.5924 13.0887C10.6507 13.0637 10.7032 13.0272 10.7469 12.9813L15.3544 8.125C15.4018 8.07213 15.4332 8.00689 15.445 7.93686C15.4568 7.86683 15.4484 7.79489 15.4209 7.72942C15.3934 7.66394 15.3479 7.60762 15.2897 7.56701C15.2314 7.5264 15.1628 7.50316 15.0919 7.5H5.73062C5.65957 7.50293 5.59082 7.52601 5.53239 7.56654C5.47395 7.60706 5.42825 7.66337 5.4006 7.72888C5.37295 7.7944 5.3645 7.86642 5.37623 7.93656C5.38797 8.0067 5.4194 8.07205 5.46687 8.125Z"
+                  d="M12.2696 1.84723L16.5196 6.09723H13.9884C12.5671 6.09723 12.2696 5.92348 12.2696 4.37848V1.84723ZM16.9284 14.6497V17.0747C16.9284 17.4689 16.772 17.847 16.4936 18.1261C16.2153 18.4052 15.8376 18.5625 15.4434 18.5635H4.17836C3.78395 18.5625 3.40606 18.405 3.12764 18.1257C2.84922 17.8463 2.69303 17.4679 2.69336 17.0735V2.92348C2.69435 2.52993 2.85112 2.15279 3.1294 1.87452C3.40768 1.59624 3.78482 1.43947 4.17836 1.43848L11.3721 1.43848V4.31348C11.3609 6.28598 11.8221 7.00973 14.0446 6.98598H16.9196V11.8785L16.9284 14.6497Z"
                   fill="white" />
               </svg>
+
               Thêm ghi chú
             </button>
           </div>
@@ -894,7 +900,7 @@
                 <div class="flex flex-col justify-start items-start">
                   <div class="text-neutral-1-900 text-body-2 font-medium mb-1">
                     Username (admin)
-                  </div>
+                  </div>h
                   <div class="text-caption-1 font-regular text-neutral-1-400">
                     <span class="mr-2">16:15</span>
                     <span>25-06-2021</span>
@@ -1152,8 +1158,8 @@
                   </div>
                 </div>
                 <div class="mr-2 flex justify-between items-center">
-                  <button type="username"
-                    class="flex justify-between items-center truncate block pl-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding appearance-none rounded focus:text-neutral-1-500 focus:bg-white focus:outline-none">
+                  <button
+                    class="flex justify-between text-primary-1 items-center pl-3 py-2.5  font-regular  text-body-1     ">
                     <svg class="mr-1" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -1165,7 +1171,7 @@
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10.0035 6.66683L15.8333 12.2976L14.7601 13.3335L10.0035 8.73871L5.24162 13.3335L4.16665 12.2976L10.0035 6.66683Z"
-                        fill="#2C333A" />
+                        fill="#A1ACB8" />
                     </svg>
                   </button>
                 </div>
@@ -1218,7 +1224,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex w-full mt-8 px-2 mb-3">
+              <div class="flex w-full mt-8 px-2 mb-3 text-neutral-1-900">
                 <div class="flex flex-col w-1/2 mb-1">
                   <div class="flex w-full text-body-2">
                     <div class="w-1/2 font-regular">4 sản phẩm</div>
@@ -1274,8 +1280,8 @@
                   </div>
                 </div>
                 <div class="mr-2 flex justify-between items-center">
-                  <button type="username"
-                    class="flex justify-between items-center truncate block pl-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding appearance-none rounded focus:text-neutral-1-500 focus:bg-white focus:outline-none">
+                  <button
+                    class="flex justify-between text-primary-1 items-center pl-3 py-2.5  font-regular  text-body-1  ">
                     <svg class="mr-1" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -1316,8 +1322,8 @@
                   </div>
                 </div>
                 <div class="mr-2 flex justify-between items-center">
-                  <button type="username"
-                    class="flex justify-between items-center truncate block pl-3 py-2.5 font-Inter font-normal text-neutral-1-400 text-body-1 bg-white bg-clip-padding appearance-none rounded focus:text-neutral-1-500 focus:bg-white focus:outline-none">
+                  <button
+                    class="flex justify-between text-primary-1 items-center pl-3 py-2.5  font-regular  text-body-1  ">
                     <svg class="mr-1" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path

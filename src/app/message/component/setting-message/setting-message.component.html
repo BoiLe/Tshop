@@ -19,11 +19,11 @@
     <div class="flex mt-4 flex-col w-10/12 bg-white rounded-md">
       <!-- header -->
       <div class="flex justify-start items-start px-4 w-full border-b-2 ">
-        <button (click)="show = true"
-          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium focus:text-neutral-1-900 focus:border-primary-1  ">Tin
+        <button (click)="clickEvent()" [ngClass]="show? 'text-neutral-1-900 border-primary-1' : ''"
+          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium   ">Tin
           nhắn tự động</button>
-        <button (click)="show = false"
-          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium focus:text-neutral-1-900 focus:border-primary-1  ">Phím
+        <button (click)="clickEvent()" [ngClass]="!show? 'text-neutral-1-900 border-primary-1' : ''"
+          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium  ">Phím
           tắt</button>
       </div>
       <!-- body -->
@@ -248,7 +248,7 @@
                         d="M9.23733 2.99053C9.23733 2.88312 9.28 2.78011 9.35595 2.70416C9.4319 2.6282 9.53491 2.58553 9.64232 2.58553H11.019C11.1264 2.58553 11.2294 2.6282 11.3054 2.70416C11.3813 2.78011 11.424 2.88312 11.424 2.99053V3.53637H12.3582V2.99053C12.3577 2.6355 12.2165 2.29513 11.9654 2.04409C11.7144 1.79304 11.374 1.65181 11.019 1.65137H9.64483C9.28979 1.65181 8.94942 1.79304 8.69837 2.04409C8.44733 2.29513 8.30611 2.6355 8.30566 2.99053V3.53637H9.23983L9.23733 2.99053Z"
                         fill="#858F9B" />
                     </svg></button>
-                  <button class="p-2 mr-2">
+                  <button class="p-2 mr-2 h-0.">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M9.99643 13.3337L4.16663 7.70293L5.23984 6.66699L9.99643 11.2618L14.7583 6.66699L15.8333 7.70293L9.99643 13.3337Z"
