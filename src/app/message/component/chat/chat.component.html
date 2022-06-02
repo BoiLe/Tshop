@@ -1,16 +1,20 @@
 <div class="h-full w-full flex flex-col overflow-hidden font-Inter">
-  <div class="py-2.5 px-4 border-b-2  h-lgx">
-    <div class="text-caption-1 font-regular text-neutral-1-400">
+  <div class="py-2.5 px-4 border-b border-neutral-2-100h  h-lgx">
+    <div class="text-caption-1 font-regular text-neutral-1-400 flex items-center">
       <button [routerLink]="['/nhan-tin/chat']" class="">Trò truyện</button>
-      >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.6666 8.00315L6.162 12.667L5.33325 11.8084L9.00908 8.00315L5.33325 4.19364L6.162 3.33366L10.6666 8.00315Z"
+          fill="#929DAA" />
+      </svg>
       <button [routerLink]="['/nhan-tin/setting']" class="">nhắn tin</button>
     </div>
     <span class="text-header-1 text-neutral-1-900 font-semibold">Nhắn Tin</span>
   </div>
   <div class="w-full h-full flex overflow-hidden">
-    <div class="w-lgxx flex flex-col  overflow-hidden border-r-2">
+    <div class="w-lgxx flex flex-col  overflow-hidden border-r">
       <!-- search and filter -->
-      <div class="w-full py-sm px-4 flex border-b-2 h-16">
+      <div class="w-full py-sm px-4 flex border-b h-16">
         <div class="flex relative mr-2 w-full">
           <span
             class="z-10 top-1/2 transform -translate-y-1/2 absolute input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
@@ -44,8 +48,10 @@
       <div class="w-full py-2.5 px-2 border-b-2 h-16">
         <div class="flex items-center gap-x-2">
           <div class="flex items-center w-3/5 gap-x-2">
-            <div class="">
-              <input class="h-4 w-4    rounded-sm " type="checkbox" value="" />
+            <div class=" ">
+              <input class=" checked bg-primary-1 h-4 w-4 border border-solid border-neutral-2-200  rounded-sm "
+                type="checkbox" value="" />
+
             </div>
             <button type="username"
               class="flex justify-around items-center h-full w-full px-3 py-2 font-Inter font-normal text-white text-body-2 bg-primary-1 bg-clip-padding border rounded-lg transition">
@@ -75,7 +81,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -99,7 +105,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -123,7 +129,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -147,7 +153,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -171,7 +177,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -195,7 +201,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -219,7 +225,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -243,7 +249,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -267,7 +273,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -291,7 +297,7 @@
         <div class="w-full hover:bg-neutral-3-50 hover:border-primary-1 border-l-3 focus:border-primary-1 px-2 ">
           <div class="w-full flex justify-between items-center border-b-2 py-4">
             <div class="mr-3">
-              <img src="../../../../assets/Avatar.png" alt="" />
+              <img src="../../../../assets/Avatar3.png" alt="" />
             </div>
             <div class="flex justify-between hover:text-neutral-1-900">
               <div class="flex flex-col justify-between hover:text-neutral-1-900 gap-y-1.5">
@@ -317,14 +323,14 @@
       </div>
     </div>
     <!-- chat window -->
-    <div class="w-2/5 flex flex-col">
+    <div class="w-2/5 flex flex-col border-r border-neutral-2-200">
       <!-- header -->
-      <div class="flex justify-between items-center px-4 py-2 border-b-2 border-r-2">
+      <div class="flex justify-between items-center px-4 py-2 border-b border-neutral-2-200 border-r">
         <div class="flex justify-start items-center">
-          <div class="mr-3">
-            <img src="../../../../assets/Avatar.png" alt="" />
+          <div class="mr-3 w-12 h-12">
+            <img src="../../../../assets/Avatar3.png" alt="" />
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col ">
             <div class="text-body-2 font-semibold text-neutral-1-900">
               Nguyen Van Huy
             </div>
@@ -717,7 +723,7 @@
     </div>
     <div class="w-2/5 flex flex-col">
       <!-- tab menu message -->
-      <div class="flex w-full text-body-2 font-medium border-b-2 mb-2">
+      <div class="flex w-full text-body-2 font-medium border-b border-neutral-2-200 mb-2 h-16">
         <button (click)="clickEvent()"
           [ngClass]="show ? 'border-primary-1 bg-white text-neutral-1-900' : 'bg-neutral-3-50 text-neutral-1-300'"
           class="px-20 border-b-3 border-transparent  py-m w-1/2  ">
@@ -900,7 +906,7 @@
                 <div class="flex flex-col justify-start items-start">
                   <div class="text-neutral-1-900 text-body-2 font-medium mb-1">
                     Username (admin)
-                  </div>h
+                  </div>
                   <div class="text-caption-1 font-regular text-neutral-1-400">
                     <span class="mr-2">16:15</span>
                     <span>25-06-2021</span>
@@ -1293,7 +1299,7 @@
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10.0035 6.66683L15.8333 12.2976L14.7601 13.3335L10.0035 8.73871L5.24162 13.3335L4.16665 12.2976L10.0035 6.66683Z"
-                        fill="#2C333A" />
+                        fill="#A1ACB8" />
                     </svg>
                   </button>
                 </div>
@@ -1335,7 +1341,7 @@
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10.0035 6.66683L15.8333 12.2976L14.7601 13.3335L10.0035 8.73871L5.24162 13.3335L4.16665 12.2976L10.0035 6.66683Z"
-                        fill="#2C333A" />
+                        fill="#A1ACB8" />
                     </svg>
                   </button>
                 </div>
