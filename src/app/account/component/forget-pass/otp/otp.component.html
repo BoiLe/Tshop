@@ -1,87 +1,49 @@
-<div class="text-heading-2 w-full text-center mb-3 font-Inter font-semibold">
+<div class="text-heading-2 w-full text-center mb-3  font-semibold">
   Nhập mã xác minh
 </div>
-<div
-  class="text-body-1 font-normal font-Inter flex flex-col items-center text-neutral-1-500 mb-2"
->
+<div class="text-body-1 font-normal flex flex-col items-center text-neutral-1-500 mb-2">
   <span> Mã xác minh của bạn sẽ được gửi bằng tin nhắn đến </span>
   <span> (+84) 090681202 </span>
-  <div
-    class="flex flex-row justify-center text-center px-2 mt-8 mb-8 text-neutral-1-900 font-Inter text-header-2"
-    id="otp"
-  >
+  <div class="flex flex-row justify-center text-center px-2 mt-8 mb-8 "
+    >
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, '', txt1, txt2)"
-        #txt1
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="tel"
-        inputmode="numeric"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, '', txt1, txt2)" #txt1 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="tel"
+        inputmode="numeric" maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, txt1, txt2, txt3)"
-        #txt2
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="text"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, txt1, txt2, txt3)" #txt2 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="text"
+        maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, txt2, txt3, txt4)"
-        #txt3
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="text"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, txt2, txt3, txt4)" #txt3 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="text"
+        maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, txt3, txt4, txt5)"
-        #txt4
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="text"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, txt3, txt4, txt5)" #txt4 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="text"
+        maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, txt4, txt5, txt6)"
-        #txt5
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="text"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, txt4, txt5, txt6)" #txt5 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="text"
+        maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
+   
     <div class="flex flex-col justify-center items-center mr-5">
-      <input
-        (keyup)="move($event, txt5, txt6, '')"
-        #txt6
-        class="mb-1.5 h-10 w-10 text-center rounded-1 bg-transparent focus:outline-none"
-        type="text"
-        maxlength="1"
-      />
-      <div class="bg-primary-1 h-smm w-10 rounded-1"></div>
+      <input (keyup)="move($event, txt5, txt6, '')" #txt6 class="text-neutral-1-900  text-header-2 font-semibold mb-1.5 h-10 w-10 text-center rounded-1 border-transparent focus:ring-0 focus:border-transparent" type="text"
+        maxlength="1" />
+      <div class="bg-primary-1 h-0.5 w-10 rounded-full"></div>
     </div>
   </div>
 </div>
-<div
-  class="text-neutral-1-300 text-title-1 font-Inter font-medium text-center mb-8"
->
+<div class="text-neutral-1-300 text-title-1  font-medium text-center mb-8">
   <button>Gửi lại mã</button>
   <span>(30)</span>
 </div>
-<button
-  [routerLink]="['/tai-khoan/quen-mat-khau/thay-doi-mat-khau']"
-  class="py-2 w-full text-center bg-primary-1 text-white rounded-md"
->
+<button [routerLink]="['/tai-khoan/quen-mat-khau/thay-doi-mat-khau']"
+  class="py-2 w-full text-center bg-primary-1 text-white rounded-md">
   Tiếp tục
 </button>

@@ -4,9 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-register-store',
   templateUrl: './register-store.component.html',
   styleUrls: ['./register-store.component.scss'],
+  host: { class: 'flex h-full w-full' },
 })
 export class RegisterStoreComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

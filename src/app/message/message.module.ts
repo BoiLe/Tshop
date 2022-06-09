@@ -9,10 +9,27 @@ import { ModalBlockComponent } from './component/modal-block/modal-block.compone
 import { ModalUnblockComponent } from './component/modal-unblock/modal-unblock.component';
 import { RemoveMessageComponent } from './component/remove-message/remove-message.component';
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TDSButtonModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSSelectModule } from 'tmt-tang-ui';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent],
-  imports: [RouterModule, CommonModule],
+  imports: [
+    RouterModule,
+    CommonModule,
+    TDSHeaderModule,
+    TDSFormFieldModule,
+    TDSSelectModule,
+    TDSButtonModule,
+    TDSInputModule,
+    TDSMenuModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    BrowserModule
+
+
+  ],
   exports: [ChatComponent, LayoutAdminComponent],
 })
-export class MessageModule {}
+export class MessageModule { }

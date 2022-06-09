@@ -3,27 +3,19 @@
     <img src="../../../../assets/Group 11139.png" alt="" class="w-37 h-12" />
 
     <div class="flex">
-      <button
-        [routerLink]="['/taikhoan/dang-nhap']"
-        class="p-1.5 font-medium text-sm text-neutral-1-900"
-      >
+      <button [routerLink]="['/taikhoan/dang-nhap']" class="p-1.5 font-medium text-sm text-neutral-1-900">
         Trang chủ Tshop
       </button>
-      <button
-        [routerLink]="['/tai-khoan/dang-ki-tai-khoan']"
-        class="p-1.5 font-medium text-sm text-neutral-1-900"
-      >
+      <button [routerLink]="['/tai-khoan/dang-ki-tai-khoan']" class="p-1.5 font-medium text-sm text-neutral-1-900">
         Đăng kí
       </button>
-      <div
-        class="px-3 py-1.5 text-sm bg-primary-1 rounded-md font-medium text-white"
-      >
+      <div class="px-3 py-1.5 text-sm bg-primary-1 rounded-md font-medium text-white">
         VN
       </div>
       <div class="px-3 py-1.5 text-sm font-medium text-neutral-1-400">EN</div>
     </div>
   </div>
-  <div class="bg-neutral-3-300 h-screen">
+  <div class="bg-neutral-3-50 h-full w-full relative  py-8 ">
     <router-outlet></router-outlet>
   </div>
 </div>

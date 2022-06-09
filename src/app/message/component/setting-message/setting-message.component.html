@@ -23,11 +23,11 @@
     <div class="flex mt-4 flex-col w-10/12 bg-white rounded-md">
       <!-- header -->
       <div class="flex justify-start items-start px-4 w-full border-b-2 ">
-        <button (click)="clickEvent()" [ngClass]="show? 'text-neutral-1-900 border-primary-1' : ''"
-          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium   ">Tin
+        <button (click)="clickEvent()" [ngClass]="show? 'text-neutral-1-900 border-primary-1' : 'text-neutral-1-600'"
+          class="p-4 text-body-2 border-b-2 border-transparent font-medium   ">Tin
           nhắn tự động</button>
-        <button (click)="clickEvent()" [ngClass]="!show? 'text-neutral-1-900 border-primary-1' : ''"
-          class="p-4 text-neutral-1-600 text-body-2 border-b-2 border-transparent font-medium  ">Phím
+        <button (click)="clickEvent()" [ngClass]="!show? 'text-neutral-1-900 border-primary-1' : 'text-neutral-1-600'"
+          class="p-4  text-body-2 border-b-2 border-transparent font-medium  ">Phím
           tắt</button>
       </div>
       <!-- body -->
@@ -61,7 +61,8 @@
           </div>
           <div class="pl-14 mb-6">
             <div class="text-body-2 font-medium text-neutral-1-900 mb-2">Nội dung trả lời</div>
-            <textarea class="resize-none rounded-md w-full border-2 px-3 py-2 focus:outline-none"
+            <textarea
+              class="resize-none text-neutral-1-900 rounded-md w-full px-3 py-2 border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
               placeholder="Cảm ơn bạn đã quan tâm đến sản phẩm của shop. Shop sẽ phản hồi thông tin này trong giờ làm việc sớm nhất có thể."></textarea>
           </div>
         </div>
@@ -95,19 +96,28 @@
           </div>
           <div class="pl-14 mb-6">
             <div class="text-body-2 font-medium text-neutral-1-900 mb-2">Nội dung trả lời</div>
-            <textarea class="resize-none rounded-md w-full border-2 px-3 py-2 focus:outline-none"
+            <textarea
+              class="resize-none rounded-md w-full  px-3 py-2 border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
               placeholder="Cảm ơn bạn đã quan tâm đến sản phẩm của shop. Shop sẽ phản hồi thông tin này trong giờ làm việc sớm nhất có thể."></textarea>
           </div>
           <div class="pl-14 mb-6">
             <div class="mb-2">Thiết lập giờ làm việc</div>
             <div class="flex text-body-2 font-regular">
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">2</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">3</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">4</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">5</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">6</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">7</div>
-              <div class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center ">cn</div>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                2</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">3</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">4</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">5</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">6</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">7</button>
+              <button
+                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">cn</button>
             </div>
           </div>
           <div class="pl-14 mb-6">
@@ -116,10 +126,11 @@
               <div class="flex items-center">
 
                 <div class=""><input type="text"
-                    class="relative block w-full px-3 py-1.5 text-neutral-2-200  border rounded"
+                    class="relative block w-full px-3 py-1.5 text-neutral-2-200   rounded border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
                     placeholder="Select time" /></div>
                 &nbsp;<span>đến</span>&nbsp;
-                <div class=""><input type="text" class="block w-full px-3  py-1.5 text-neutral-2-200  border rounded"
+                <div class=""><input type="text"
+                    class="block w-full px-3  py-1.5 text-neutral-2-200   rounded border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
                     placeholder="Select time" /></div>
               </div>
             </div>
@@ -128,7 +139,7 @@
       </div>
       <ng-template #noPG13>
         <div class="flex flex-col p-6 ">
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-y-8">
             <div class="flex justify-between items-center mb-4">
               <div class="flex  items-center">
                 <div class="mr-4">
@@ -223,45 +234,43 @@
                   <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
                 </div>
               </div>
-              <div class="flex justify-between border-b py-4">
-                <div class="text-header-1 font-semibold text-neutral-1-900">Giá sản phẩm</div>
-                <div class="flex">
-                  <button>
-                    <div class="flex mr-2">
-                      <div class="w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                        <div class="bg-white w-3 h-3 rounded-full"></div>
-                      </div>
+            </div>
+            <div class="flex justify-between items-center border p-4 rounded-md">
+              <div class="text-header-1 font-semibold text-neutral-1-900">Giá sản phẩm</div>
+              <div class="flex">
+                <button>
+                  <div class="flex mr-2">
+                    <div class="w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
+                      <div class="bg-white w-3 h-3 rounded-full"></div>
                     </div>
-                  </button>
-                  <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M11.8284 5.00334L14.88 8.06962L7.15561 15.8311L4.10571 12.7648L11.8284 5.00334ZM17.1955 4.26365L15.8346 2.8962C15.5814 2.64248 15.2384 2.5 14.8809 2.5C14.5233 2.5 14.1803 2.64248 13.9272 2.8962L12.6219 4.2077L15.6736 7.27398L17.1955 5.74477C17.3905 5.54812 17.5 5.28182 17.5 5.00421C17.5 4.7266 17.3905 4.46031 17.1955 4.26365ZM2.5081 17.0753C2.49547 17.1331 2.49764 17.1931 2.51441 17.2499C2.53119 17.3066 2.56201 17.3581 2.60401 17.3996C2.646 17.4411 2.69779 17.4712 2.75452 17.4871C2.81126 17.503 2.87108 17.5042 2.92839 17.4906L6.32809 16.6617L3.28254 13.5954L2.5081 17.0753Z"
-                        fill="#858F9B" />
-                    </svg>
-                  </button>
-                  <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.5448 5.86194L15.1973 4.81944C15.1632 4.71709 15.0978 4.62806 15.0103 4.56495C14.9228 4.50183 14.8177 4.46784 14.7098 4.46777H5.64314C5.53526 4.46784 5.43013 4.50183 5.34264 4.56495C5.25515 4.62806 5.18974 4.71709 5.15564 4.81944L4.80814 5.86194C4.78995 5.91674 4.78502 5.97509 4.79375 6.03217C4.80249 6.08926 4.82465 6.14345 4.85841 6.19031C4.89216 6.23716 4.93656 6.27534 4.98794 6.3017C5.03932 6.32806 5.09623 6.34185 5.15398 6.34194H15.199C15.2567 6.34185 15.3136 6.32806 15.365 6.3017C15.4164 6.27534 15.4608 6.23716 15.4945 6.19031C15.5283 6.14345 15.5505 6.08926 15.5592 6.03217C15.5679 5.97509 15.563 5.91674 15.5448 5.86194Z"
-                        fill="#858F9B" />
-                      <path
-                        d="M6.42554 16.9698C6.44482 17.143 6.52731 17.3031 6.65724 17.4193C6.78716 17.5356 6.95538 17.5998 7.1297 17.5998H13.1639C13.3382 17.5998 13.5064 17.5356 13.6363 17.4193C13.7663 17.3031 13.8488 17.143 13.868 16.9698L14.9447 7.27979H5.34888L6.42554 16.9698Z"
-                        fill="#858F9B" />
-                      <path
-                        d="M9.23733 2.99053C9.23733 2.88312 9.28 2.78011 9.35595 2.70416C9.4319 2.6282 9.53491 2.58553 9.64232 2.58553H11.019C11.1264 2.58553 11.2294 2.6282 11.3054 2.70416C11.3813 2.78011 11.424 2.88312 11.424 2.99053V3.53637H12.3582V2.99053C12.3577 2.6355 12.2165 2.29513 11.9654 2.04409C11.7144 1.79304 11.374 1.65181 11.019 1.65137H9.64483C9.28979 1.65181 8.94942 1.79304 8.69837 2.04409C8.44733 2.29513 8.30611 2.6355 8.30566 2.99053V3.53637H9.23983L9.23733 2.99053Z"
-                        fill="#858F9B" />
-                    </svg></button>
-                  <button class="p-2 mr-2 h-0.">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M9.99643 13.3337L4.16663 7.70293L5.23984 6.66699L9.99643 11.2618L14.7583 6.66699L15.8333 7.70293L9.99643 13.3337Z"
-                        fill="#858F9B" />
-                    </svg>
-
-
-                  </button>
-                </div>
+                  </div>
+                </button>
+                <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.8284 5.00334L14.88 8.06962L7.15561 15.8311L4.10571 12.7648L11.8284 5.00334ZM17.1955 4.26365L15.8346 2.8962C15.5814 2.64248 15.2384 2.5 14.8809 2.5C14.5233 2.5 14.1803 2.64248 13.9272 2.8962L12.6219 4.2077L15.6736 7.27398L17.1955 5.74477C17.3905 5.54812 17.5 5.28182 17.5 5.00421C17.5 4.7266 17.3905 4.46031 17.1955 4.26365ZM2.5081 17.0753C2.49547 17.1331 2.49764 17.1931 2.51441 17.2499C2.53119 17.3066 2.56201 17.3581 2.60401 17.3996C2.646 17.4411 2.69779 17.4712 2.75452 17.4871C2.81126 17.503 2.87108 17.5042 2.92839 17.4906L6.32809 16.6617L3.28254 13.5954L2.5081 17.0753Z"
+                      fill="#858F9B" />
+                  </svg>
+                </button>
+                <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.5448 5.86194L15.1973 4.81944C15.1632 4.71709 15.0978 4.62806 15.0103 4.56495C14.9228 4.50183 14.8177 4.46784 14.7098 4.46777H5.64314C5.53526 4.46784 5.43013 4.50183 5.34264 4.56495C5.25515 4.62806 5.18974 4.71709 5.15564 4.81944L4.80814 5.86194C4.78995 5.91674 4.78502 5.97509 4.79375 6.03217C4.80249 6.08926 4.82465 6.14345 4.85841 6.19031C4.89216 6.23716 4.93656 6.27534 4.98794 6.3017C5.03932 6.32806 5.09623 6.34185 5.15398 6.34194H15.199C15.2567 6.34185 15.3136 6.32806 15.365 6.3017C15.4164 6.27534 15.4608 6.23716 15.4945 6.19031C15.5283 6.14345 15.5505 6.08926 15.5592 6.03217C15.5679 5.97509 15.563 5.91674 15.5448 5.86194Z"
+                      fill="#858F9B" />
+                    <path
+                      d="M6.42554 16.9698C6.44482 17.143 6.52731 17.3031 6.65724 17.4193C6.78716 17.5356 6.95538 17.5998 7.1297 17.5998H13.1639C13.3382 17.5998 13.5064 17.5356 13.6363 17.4193C13.7663 17.3031 13.8488 17.143 13.868 16.9698L14.9447 7.27979H5.34888L6.42554 16.9698Z"
+                      fill="#858F9B" />
+                    <path
+                      d="M9.23733 2.99053C9.23733 2.88312 9.28 2.78011 9.35595 2.70416C9.4319 2.6282 9.53491 2.58553 9.64232 2.58553H11.019C11.1264 2.58553 11.2294 2.6282 11.3054 2.70416C11.3813 2.78011 11.424 2.88312 11.424 2.99053V3.53637H12.3582V2.99053C12.3577 2.6355 12.2165 2.29513 11.9654 2.04409C11.7144 1.79304 11.374 1.65181 11.019 1.65137H9.64483C9.28979 1.65181 8.94942 1.79304 8.69837 2.04409C8.44733 2.29513 8.30611 2.6355 8.30566 2.99053V3.53637H9.23983L9.23733 2.99053Z"
+                      fill="#858F9B" />
+                  </svg></button>
+                <button class="p-2 mr-2 h-0.">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.99643 13.3337L4.16663 7.70293L5.23984 6.66699L9.99643 11.2618L14.7583 6.66699L15.8333 7.70293L9.99643 13.3337Z"
+                      fill="#858F9B" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
