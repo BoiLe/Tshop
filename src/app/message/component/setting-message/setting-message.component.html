@@ -3,19 +3,16 @@
     <div class="flex justify-between items-center ">
       <div class="">
         <div class="text-caption-1 font-regular text-neutral-1-400 flex items-center">
-          <button [routerLink]="['/nhan-tin/chat']" class="">Tin nhắn </button>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.6666 8.00315L6.162 12.667L5.33325 11.8084L9.00908 8.00315L5.33325 4.19364L6.162 3.33366L10.6666 8.00315Z"
-              fill="#929DAA" />
-          </svg>
-          <button [routerLink]="['/nhan-tin/setting']" class=""> Thiết lập chat</button>
+        <tds-breadcrumb>
+          <tds-breadcrumb-item><a [routerLink]="['/nhan-tin/chat']">Tin nhắn</a></tds-breadcrumb-item>
+          <tds-breadcrumb-item>Thiết lập chat</tds-breadcrumb-item>
+        </tds-breadcrumb>
         </div>
         <span class="text-header-1 text-neutral-1-900 font-semibold">Thiết lập chat</span>
       </div>
       <div class="font-medium text-body-2">
-        <button class="px-3 py-2 text-white bg-primary-1  rounded-md mr-2">Lưu thay đổi</button>
-        <button class="px-3 py-2 text-neutral-1-900 border border-neutral-2-200 rounded-md"> Hủy</button>
+        <button tds-flat-button class="px-3 py-2  hover:bg-primary-2 focus:text-primary-1   text-white bg-primary-1  rounded-md mr-2 text-body-2 font-medium">Lưu thay đổi</button>
+        <button tds-flat-button class="px-3 py-2 border border-neutral-2-200 rounded-md text-body-2 font-medium text-neutral-1-900"> Hủy</button>
       </div>
     </div>
   </div>
@@ -52,10 +49,8 @@
                 </div>
               </div>
             </div>
-            <div class="flex">
-              <div class="mr-2 w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                <div class="bg-white w-3 h-3 rounded-full"></div>
-              </div>
+            <div class="flex gap-2">
+              <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
               <div class="text-body-2 font-regular text-neutral-1-900">Kích hoạt</div>
             </div>
           </div>
@@ -87,10 +82,8 @@
                 </div>
               </div>
             </div>
-            <div class="flex">
-              <div class="mr-2 w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                <div class="bg-white w-3 h-3 rounded-full"></div>
-              </div>
+            <div class="flex gap-2">
+              <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
               <div class="text-body-2 font-regular text-neutral-1-900">Kích hoạt</div>
             </div>
           </div>
@@ -103,35 +96,42 @@
           <div class="pl-14 mb-6">
             <div class="mb-2">Thiết lập giờ làm việc</div>
             <div class="flex text-body-2 font-regular">
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1 text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
                 2</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">3</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">4</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">5</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">6</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">7</button>
-              <button
-                class="w-8 h-8 bg-primary-1 text-white rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">cn</button>
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1  text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                3</button>
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1  text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                4</button>
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1  text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                5</button> 
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1   text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                6</button>
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1  text-body-2 font-medium hover:bg-primary-2 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                7</button>
+              <button tds-flat-button
+                class="w-8 h-8 bg-primary-1 text-white !rounded-full mr-4 flex items-center justify-center border focus:bg-white focus:text-primary-1 focus:border-primary-1">
+                CN</button>
+              
             </div>
           </div>
           <div class="pl-14 mb-6">
             <div class="mb-2">Giờ trong ngày</div>
-            <div class="flex text-body-2 font-regular">
-              <div class="flex items-center">
+            <div class="flex text-body-2 font-regular items-center ">
+              <div class="mr-2">
+                <tds-time-picker  [(ngModel)]="time"  [defaultOpenValue]="defaultOpenValue" [use12Hours]="true" placeholder="Select time">
+                </tds-time-picker>
+              </div>
+              đến
+              <div class="ml-2">
+                <tds-time-picker  [(ngModel)]="time"  [defaultOpenValue]="defaultOpenValue" [use12Hours]="true" placeholder="Select time">
+                </tds-time-picker>
 
-                <div class=""><input type="text"
-                    class="relative block w-full px-3 py-1.5 text-neutral-2-200   rounded border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
-                    placeholder="Select time" /></div>
-                &nbsp;<span>đến</span>&nbsp;
-                <div class=""><input type="text"
-                    class="block w-full px-3  py-1.5 text-neutral-2-200   rounded border border-neutral-2-200 focus:ring-0 focus:border-primary-1"
-                    placeholder="Select time" /></div>
               </div>
             </div>
           </div>
@@ -153,27 +153,22 @@
                   </svg>
                 </div>
                 <div class="flex flex-col items-stretch">
-                  <div class="text-header-1 text-neutral-1-900 font-semibold">Phím tắt tin nhắn</div>
-                  <div class="text-body-2 font-regular text-neutral-1-400">Các phím tắt tin nhắn cho phép bạn tạo và sử
+                  <div class="text-header-1 text-neutral-1-900 font-semibold truncate">Phím tắt tin nhắn</div>
+                  <div class="text-body-2 font-regular text-neutral-1-400  w-full overflow-visible">Các phím tắt tin nhắn cho phép bạn tạo và sử
                     dụng các mẫu tin nhắn mà bạn thường xuyên gửi. ( Tối đa 8 nhóm )
                   </div>
                 </div>
               </div>
               <div class="flex items-center">
-                <div class="flex mr-8">
-                  <div class="mr-2 w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                    <div class="bg-white w-3 h-3 rounded-full"></div>
-                  </div>
-                  <div class="text-body-2 font-regular text-neutral-1-900">Kích hoạt</div>
+                <div class="flex mr-8 items-center gap-2 text-body-2 font-regular text-neutral-1-900 truncate">
+                  <tds-switch size="lg" class=" "></tds-switch>
+                  Kích hoạt
                 </div>
-                <button (click)="showadd = false"
-                  class="px-3 py-2  bg-primary-1 flex items-center font-medium body-2  text-white rounded-md">
-                  <svg class="mr-2" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.893 15.8957C17.4556 14.3322 18.3334 12.212 18.3334 10.0014C18.3334 7.7908 17.4556 5.67067 15.893 4.10715C14.3303 2.54443 12.2109 1.6665 10.0009 1.6665C7.79103 1.6665 5.67162 2.54443 4.10892 4.10715C3.33469 4.88105 2.7205 5.79993 2.30147 6.81129C1.88243 7.82265 1.66675 8.90667 1.66675 10.0014C1.66675 11.0962 1.88243 12.1802 2.30147 13.1915C2.7205 14.2029 3.33469 15.1218 4.10893 15.8957C5.67261 17.4565 7.79165 18.3332 10.0009 18.3332C12.2102 18.3332 14.3293 17.4565 15.893 15.8957ZM5.92827 10.6962C5.83618 10.6962 5.74787 10.6596 5.68276 10.5945C5.61764 10.5294 5.58106 10.4411 5.58106 10.349L5.58106 9.65453C5.58106 9.56244 5.61764 9.47412 5.68276 9.409C5.74787 9.34388 5.83618 9.3073 5.92827 9.3073L9.30654 9.3073L9.30654 5.92873C9.30654 5.83664 9.34312 5.74832 9.40823 5.6832C9.47335 5.61808 9.56166 5.5815 9.65374 5.5815L10.3481 5.5815C10.4402 5.5815 10.5285 5.61808 10.5937 5.6832C10.6588 5.74832 10.6953 5.83664 10.6953 5.92873L10.6953 9.3073L14.0722 9.3073C14.1643 9.3073 14.2526 9.34388 14.3177 9.409C14.3829 9.47412 14.4194 9.56244 14.4194 9.65453L14.4194 10.349C14.4194 10.4411 14.3829 10.5294 14.3177 10.5945C14.2526 10.6596 14.1643 10.6962 14.0722 10.6962L10.6953 10.6962L10.6953 14.0741C10.6953 14.1662 10.6588 14.2545 10.5937 14.3196C10.5285 14.3847 10.4402 14.4213 10.3481 14.4213L9.65374 14.4213C9.56166 14.4213 9.47335 14.3847 9.40823 14.3196C9.34312 14.2545 9.30654 14.1662 9.30654 14.0741L9.30654 10.6969L5.92827 10.6962Z"
-                      fill="white" />
-                  </svg>
+                <button tds-flat-button (click)="showadd = false"
+                  class="px-3 py-2 hover:bg-primary-2 focus:text-primary-1  bg-primary-1 flex items-center font-medium body-2  text-white rounded-md">
+                  <span class="flex items-center font-medium  text-body-2 !focus:text-primary-1 ">
+                    <i class="tdsi-plus-circle-fill text-lg leading-none mr-2 !focus:text-primary-1"></i> 
+                  </span>
                   Thêm phím tắt
                 </button>
               </div>
@@ -186,9 +181,7 @@
                 <div class="flex">
                   <button>
                     <div class="flex mr-2">
-                      <div class="w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                        <div class="bg-white w-3 h-3 rounded-full"></div>
-                      </div>
+                      <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
                     </div>
                   </button>
                   <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -240,9 +233,7 @@
               <div class="flex">
                 <button>
                   <div class="flex mr-2">
-                    <div class="w-9 h-5 p-1 bg-primary-2 rounded-full flex flex-row-reverse">
-                      <div class="bg-white w-3 h-3 rounded-full"></div>
-                    </div>
+                  <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
                   </div>
                 </button>
                 <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"

@@ -14,6 +14,11 @@ import { ChangePassComponent } from './component/forget-pass/change-pass/change-
 import { RegisterComponent } from './component/register/register.component';
 import { PhoneComponent } from './component/register/phone/phone.component';
 import { PinComponent } from './component/register/pin/pin.component';
+import { TDSAvatarModule, TDSButtonModule, TDSCheckBoxModule, TDSDividerModule, TDSDropDownModule, TDSError, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSLabel, TDSSelectModule } from 'tmt-tang-ui';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './component/login/login-form/login-form.component';
+import { RegisterFormComponent } from './component/register-store/register-form/register-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,8 +33,36 @@ import { PinComponent } from './component/register/pin/pin.component';
     RegisterComponent,
     PhoneComponent,
     PinComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
+   
+
+
+
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, 
+    RouterModule,
+    TDSAvatarModule,
+    TDSHeaderModule,
+    TDSDropDownModule,
+    TDSButtonModule,
+    TDSFormFieldModule,
+    TDSCheckBoxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TDSInputModule,
+    TDSDividerModule,
+    TDSSelectModule,
+    BrowserAnimationsModule,
+    
+    
+  
+    
+    
+    
+    
+
+  ],
   exports: [LayoutComponent, LoginComponent],
 })
-export class AccountModule {}
+export class AccountModule { }

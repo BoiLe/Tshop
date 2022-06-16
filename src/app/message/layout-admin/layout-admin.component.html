@@ -1,5 +1,5 @@
 <!-- layout -->
-<div class="flex w-screen h-screen " (window:resize)="onResize($event)">
+<div class="flex w-screen h-screen"  (window:resize)="onResize($event)">
   <!-- sidebar -->
   <div [style.min-width.px]="!isCollapsed ? 260 : 64">
     <tds-menu [options]="style1" [data]="lstMenu2" [inlineCollapsed]="isCollapsed" [showLogo]="true"
@@ -24,7 +24,7 @@
       </svg>
     </tds-menu>
   </div>
-  <div class="flex-auto h-full flex flex-col overflow-hidden  ">
+  <div class=" flex-auto h-full flex flex-col overflow-hidden  ">
     <!-- appbar -->
     <tds-header class="bg-white py-1 " urlAvatar='assets/Avatar1.png'>
 

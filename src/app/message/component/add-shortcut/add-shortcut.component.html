@@ -2,21 +2,11 @@
   <div class="py-2.5 px-4 border-b-2 h-lgx">
     <div class="flex justify-between items-center ">
       <div class="">
-        <div class="text-caption-1 font-regular text-neutral-1-400 flex items-center">
-          <button [routerLink]="['/nhan-tin/chat']" class="">Tin nhắn </button>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.6666 8.00315L6.162 12.667L5.33325 11.8084L9.00908 8.00315L5.33325 4.19364L6.162 3.33366L10.6666 8.00315Z"
-              fill="#929DAA" />
-          </svg>
-          <button [routerLink]="['/nhan-tin/setting']" class=""> Thiết lập chat</button>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.6666 8.00315L6.162 12.667L5.33325 11.8084L9.00908 8.00315L5.33325 4.19364L6.162 3.33366L10.6666 8.00315Z"
-              fill="#929DAA" />
-          </svg>
-          <button [routerLink]="['/nhan-tin/setting']" class="">Thêm phím tắt</button>
-        </div>
+        <tds-breadcrumb>
+          <tds-breadcrumb-item><a [routerLink]="['/nhan-tin/chat']">Tin nhắn</a></tds-breadcrumb-item>
+          <tds-breadcrumb-item><a [routerLink]="['/nhan-tin/setting']">Thiết lập chat</a></tds-breadcrumb-item>
+          <tds-breadcrumb-item>Phím tắt</tds-breadcrumb-item>
+        </tds-breadcrumb>
         <span class="text-header-1 text-neutral-1-900 font-semibold">Thêm phím tắt</span>
       </div>
       <div class="font-medium text-body-2">
@@ -33,7 +23,7 @@
           <span class="text-error-500">*</span>
         </div>
         <input type="text"
-          class="w-10/12 px-3 py-2  text-body-2 font-regular rounded  border  focus:ring-primary-1 focus:border-primary-1 "
+          class="w-10/12 px-3 py-2  text-body-2 border-neutral-2-200  font-regular rounded  border  focus:ring-primary-1 focus:border-primary-1 "
           placeholder="Nhập từ khóa">
       </div>
       <div class="bg-white border rounded-md p-6  w-full items-center">
@@ -109,16 +99,10 @@
           </div>
 
 
-          <button class="gap-x-2 flex w-full justify-center border px-2.5 py-2.5 rounded-md">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14.4347 9.26274C14.3935 9.17155 14.3269 9.0942 14.2428 9.03998C14.1587 8.98577 14.0607 8.95699 13.9607 8.9571H11.8774V2.18688C11.8773 2.11835 11.8636 2.05052 11.8373 1.98726C11.8109 1.92401 11.7723 1.86657 11.7238 1.81824C11.6752 1.7699 11.6175 1.73162 11.5541 1.70559C11.4908 1.67955 11.4229 1.66627 11.3543 1.66651H9.27106C9.13312 1.66674 9.00089 1.72164 8.90335 1.81918C8.80582 1.91672 8.75092 2.04894 8.75068 2.18688V8.95889H6.66739C6.5673 8.95874 6.46932 8.98745 6.38514 9.04159C6.30096 9.09572 6.23417 9.17299 6.19279 9.26411C6.15141 9.35524 6.1372 9.45637 6.15184 9.55537C6.16648 9.65438 6.20936 9.74706 6.27533 9.82232L9.92062 13.9889C9.96939 14.0448 10.0296 14.0897 10.0971 14.1204C10.1647 14.1511 10.238 14.167 10.3122 14.167C10.3865 14.167 10.4598 14.1511 10.5274 14.1204C10.5949 14.0897 10.6551 14.0448 10.7039 13.9889L14.3492 9.82232C14.416 9.74731 14.4597 9.65452 14.4748 9.5552C14.49 9.45588 14.4761 9.35429 14.4347 9.26274Z"
-                fill="#FF6720" />
-              <path
-                d="M16.044 13.1255V16.2504H4.58328V13.1255H2.5V17.292C2.5 17.5683 2.60974 17.8332 2.80509 18.0286C3.00044 18.2239 3.26538 18.3337 3.54164 18.3337H17.0857C17.2225 18.3338 17.358 18.307 17.4844 18.2546C17.6108 18.2023 17.7257 18.1256 17.8225 18.0289C17.9192 17.9321 17.9959 17.8172 18.0482 17.6908C18.1005 17.5644 18.1274 17.4289 18.1273 17.292V13.1255H16.044Z"
-                fill="#FF6720" />
-            </svg>
-            Thêm tin nhắn mới
+          <button tds-button class="w-full  border  rounded-md">
+            <span class="flex items-center text-primary-1">
+              <i class="tdsi-download-fill text-lg leading-none mr-2"></i>Thêm tin nhắn mới
+            </span>
           </button>
         </div>
       </div>

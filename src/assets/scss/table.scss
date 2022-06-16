@@ -6,12 +6,12 @@
   }
 
   .tds-table-thead>tr>th {
-   @apply bg-neutral-3-50 dark: bg-d-neutral-3-300 p-3 dark:text-d-neutral-1-900;
+   @apply bg-neutral-3-50 dark:bg-d-neutral-3-300 p-3 dark:text-d-neutral-1-900;
   }
 
   .tds-table-tbody>tr:not(.tds-table-placeholder)>td {
    transition: background 0.3s;
-   @apply border-b border-neutral-2-100 text-neutral-1-900 dark: text-d-neutral-1-900 p-3;
+   @apply border-b border-neutral-2-100 text-neutral-1-900 dark:text-d-neutral-1-900 p-3;
   }
 
   .tds-table-tbody>tr>td.tds-table-cell-with-append {
@@ -19,15 +19,15 @@
   }
 
   .tds-table-tbody>tr.tds-table-row:hover>td {
-   @apply bg-neutral-3-50 dark: bg-d-neutral-3-300;
+   @apply bg-neutral-3-50 dark:bg-d-neutral-3-300;
   }
 
   .tds-table-cell-fix-left {
-   @apply bg-white dark: bg-d-neutral-3-200;
+   @apply bg-white dark:bg-d-neutral-3-200;
   }
 
   .tds-table-cell-fix-right {
-   @apply bg-white dark: bg-d-neutral-3-200;
+   @apply bg-white dark:bg-d-neutral-3-200;
   }
 
   .tds-table-ping-left .tds-table-cell-fix-left-last:before {

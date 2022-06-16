@@ -1,19 +1,16 @@
 <div class="h-screen w-screen flex flex-col relative">
   <div class="flex justify-between items-center bg-white shadow-lg px-10 py-2">
-    <img src="../../../../assets/Group 11139.png" alt="" class="w-37 h-12" />
-
-    <div class="flex">
-      <button [routerLink]="['/taikhoan/dang-nhap']" class="p-1.5 font-medium text-sm text-neutral-1-900">
-        Trang chủ Tshop
-      </button>
-      <button [routerLink]="['/tai-khoan/dang-ki-tai-khoan']" class="p-1.5 font-medium text-sm text-neutral-1-900">
-        Đăng kí
-      </button>
-      <div class="px-3 py-1.5 text-sm bg-primary-1 rounded-md font-medium text-white">
-        VN
+    <img src="../../../../assets/Group 11139.png" alt="" />
+    <tds-button-group class="gap-4">
+      <button tds-flat-button [routerLink]="['/taikhoan/dang-nhap']"
+        class="p-1.5 font-medium text-sm text-neutral-1-900">Trang chủ Tshop</button>
+      <button tds-flat-button class="p-1.5 font-medium text-sm text-neutral-1-900 border-transparent">Đăng kí</button>
+      <div class="flex">
+        <button 
+          class="px-3 py-1.5 text-sm bg-primary-1 rounded-md font-medium text-white">VN</button>
+        <button tds-flat-button class="px-3 py-1.5 text-sm font-medium text-neutral-1-400">EN</button>
       </div>
-      <div class="px-3 py-1.5 text-sm font-medium text-neutral-1-400">EN</div>
-    </div>
+    </tds-button-group>
   </div>
   <div class="bg-neutral-3-50 h-full w-full relative  py-8 ">
     <router-outlet></router-outlet>

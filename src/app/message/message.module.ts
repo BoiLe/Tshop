@@ -10,8 +10,8 @@ import { ModalUnblockComponent } from './component/modal-unblock/modal-unblock.c
 import { RemoveMessageComponent } from './component/remove-message/remove-message.component';
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TDSButtonModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSSelectModule } from 'tmt-tang-ui';
-import { ReactiveFormsModule } from '@angular/forms';
+import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSSwitchModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent],
@@ -26,7 +26,18 @@ import { BrowserModule } from '@angular/platform-browser';
     TDSMenuModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    TDSTagModule,
+    TDSBreadCrumbModule,
+    TDSDropDownModule,
+    TDSCheckBoxModule,
+    TDSTimePickerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TDSSwitchModule,
+    TDSModalModule,
+    TDSCollapseModule,
+    TDSBadgeModule
 
 
   ],

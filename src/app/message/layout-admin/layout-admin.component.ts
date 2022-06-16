@@ -30,7 +30,8 @@ export class LayoutAdminComponent implements OnInit {
     this.isCollapsed = e;
   }
 
-  breakpoint: number = 1024;
+  breakpoint: number = 500;
+  
   onResize(event: any) {
     const w = event.target.innerWidth;
     if (w > this.breakpoint) {

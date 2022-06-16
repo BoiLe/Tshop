@@ -2,8 +2,8 @@
   class="flex w-2/3 h-4/5    bg-white rounded-xl absolute shadow-2xl p-16 text-neutral-1-900 gap-20  font-medium top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
   <div class="flex items-center w-1/2">
     <div class="flex flex-col items-center">
-      <img src="../../../../assets/Login.png" alt="" class="" />
-      <div class="text-heading-1 mt-10 mb-2.5 ">Bán hàng chuyên nghiệp</div>
+      <img src="../../../../assets/Login.png" alt="" class="object-fill" />
+      <div class="text-heading-1 mt-10 mb-2.5 truncate">Bán hàng chuyên nghiệp</div>
       <div class="">Quản lí shop của bạn một cách hiệu quả hơn trên</div>
       <div class="text-title-1 ">
         <span class="text-primary-1">Tshop seller center </span>
@@ -11,50 +11,5 @@
       </div>
     </div>
   </div>
-  <div class="w-1/2 bg-white shadow-xl p-8">
-    <div class="flex flex-col">
-      <div class="text-heading-2  font-semibold w-full text-center mb-9">
-        Đăng nhập
-      </div>
-      <form>
-        <div class="flex flex-col items-start">
-          <div class=" w-full mb-7">
-            <label class="font-medium text-body-2 ">Tài khoản </label>
-            <input
-              class=" block w-full px-3 py-2.5 text-body-1 text-neutral-1-400  font-normal bg-white border border-solid border-neutral-2-200 rounded transition focus:text-gray-700 focus:bg-white focus:border-primary-1 focus:outline-none"
-              placeholder="Nhập email/số điện thoại" />
-          </div>
-          <div class=" w-full mb-7">
-            <label class="inline-blockfont-medium text-body-2 ">Mật khẩu</label>
-            <input type="password"
-              class=" w-full px-3 py-2.5  text-body-1 text-neutral-1-400  font-normal bg-white bg-clip-padding border border-solid border-neutral-2-200 rounded transition focus:text-gray-700 focus:bg-white focus:border-primary-1 focus:ring-0"
-              placeholder="Nhập mật khẩu" />
-          </div>
-          <div class="flex justify-between items-baseline w-full mb-9">
-            <div>
-              <input type="checkbox"
-                class="checked  h-4 w-4 border border-gray-300 text-primary-1 rounded-sm bg-white   focus:ring-primary-1 transition duration-200 mt-1 align-top bg-no-repeat bg-center  mr-2 " />
-              <label class=" text-gray-800">Nghi nhớ đăng nhập</label>
-            </div>
-            <a [routerLink]="['/tai-khoan/quen-mat-khau/dat-lai-mat-khau']" href="#!"
-              class="text-primary-1 hover:text-black focus:text-blue-700 transition duration-200 ease-in-out">Quên mật
-              khẩu</a>
-          </div>
-          <button type="submit" [routerLink]="['/tai-khoan/cua-hang']"
-            class="w-full px-6 py-2.5 bg-primary-1 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-primary-2 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-            Đăng nhập
-          </button>
-          <div class="mt-9 text-center w-full">Hoặc đăng nhập với</div>
-          <div class="mt-9 flex justify-center w-full">
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="mr-8">
-              <img src="../../../../assets//Facebook_f_Logo_(with_gradient) 1.png" alt="" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <img src="../../../../assets//google (2) 1.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+  <app-login-form></app-login-form>
 </div>

@@ -1,0 +1,79 @@
+<form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="text-center text-heading-2 mb-8">Đăng kí shop mới</div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Tên shop</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field class="w-full col-span-2">
+      <input tdsInput autocomplete="off" placeholder="Vui lòng nhập tên shop" formControlName="noiDung"
+        [required]='true' />
+      <tds-error>Vui lòng chọn nội dung</tds-error>
+    </tds-form-field>
+  </div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Tỉnh Thành</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field>
+      <tds-select  valueField="id" textField="name" [open]="true" [(ngModel)]="listSelected" placeholder='select item'
+       disabledField="isActive" [data]="listData" mode="tags">
+      </tds-select>
+      <tds-error>Validation message text</tds-error>
+    </tds-form-field>
+  
+  </div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Quận huyện</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field>
+      <tds-select valueField="id" textField="name" [(ngModel)]="listSelected" placeholder='select item'
+        (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags">
+      </tds-select>
+    </tds-form-field>
+  
+  </div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Phường xã</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field>
+      <tds-select valueField="id" textField="name" [(ngModel)]="listSelected" placeholder='select item'
+        (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags">
+      </tds-select>
+    </tds-form-field>
+  
+  </div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Địa chỉ</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field class="w-full">
+      <input tdsInput autocomplete="off" placeholder="Địa chỉ" formControlName="noiDung" [required]='true' />
+      <tds-error>Vui lòng chọn nội dung</tds-error>
+    </tds-form-field>
+  
+  </div>
+  
+  <div class=" w-full mb-9">
+    <div class=" flex items-center mb-2">
+      <tds-label>Số điện thoại</tds-label>
+      <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
+    </div>
+    <tds-form-field class="w-full ">
+      <input tdsInput autocomplete="off" placeholder="Địa chỉ" formControlName="noiDung" [required]='true' />
+      <tds-error>Vui lòng chọn nội dung</tds-error>
+    </tds-form-field>
+  </div>
+  
+  <button routerLink="/tai-khoan/dang-nhap" tds-flat-button
+    class="w-full bg-primary-1 text-white hover:bg-primary-2 focus:text-primary-1   rounded-md text-title-1">
+    Đăng nhập
+  </button>
+
+</form>
