@@ -9,13 +9,13 @@
     <span class="text-header-1 text-neutral-1-900 font-semibold">Nhắn Tin</span>
   </div>
   <div class="w-full h-full  flex overflow-hidden">
-    <div class="w-80 md:hidden sm:hidden h-full flex flex-col  border-r">
+    <div class="w-80  h-full flex flex-col  border-r">
       <!-- search and filter -->
       <div class="w-full py-4 px-4  flex border-b items-center gap-2">
-        <tds-form-field class="w-full">
-          <input autocomplete="off" tdsInput placeholder="Search"  [required]='true'  />
-          <span tdsPrefix><i class="tdsi-search-fill"></i></span>
-        </tds-form-field>
+         <tds-form-field class="w-full">
+    <input tdsInput placeholder="search.." autocomplete="off" />
+    <span tdsPrefix><i class="text-neutral-1-500 tdsi-search-fill"></i></span>
+  </tds-form-field>
         <button tds-button-icon class="rounded-md  ">
             <tds-badge status="primary" [dot]="true" >
             <span class="flex items-center">
@@ -335,7 +335,7 @@
     </div>
     <div class="flex  h-full flex-auto   overflow-hidden">
       <!-- chat window -->
-      <div class=" 2xl:w-1/2 lg:w-full md:w-full sm:w-full flex flex-col border-r border-neutral-2-200"
+      <div class=" 2xl:w-1/2 lg:w-full xl:w-full  flex flex-col border-r border-neutral-2-200"
         [style.hidden]="!isCollapsed ? !isCollapsed : isCollapsed">
         <!-- header -->
         <div class="flex justify-between items-center px-4 py-2  border-neutral-2-200 border-r">
@@ -404,7 +404,7 @@
                   <div *ngIf="showmore" class="flex">
                     <button tds-button-flat-icon placement='bottomRight' tds-dropdown trigger="click" [tdsDropdownMenu]="menu" rounded="!rounded-full"
                       class="m-1 text-neutral-1-500">
-                      <i class="tdsi-three-dots-vertical-fill"></i>
+                      <i class="tdsi-three-dots-vertical-fill text-neutral-1-300"></i>
                     </button>
                     <tds-dropdown-menu #menu="tdsDropdownMenu">
                       <div class="w-full">
@@ -423,10 +423,10 @@
                       </div>
                     </tds-dropdown-menu>  
                     <button tds-button-flat-icon rounded="!rounded-full" class="m-1 text-neutral-1-500">
-                      <i class="tdsi-reply-fill"></i>
+                      <i class="tdsi-reply-fill text-neutral-1-300"></i>
                     </button>
                     <button tds-button-flat-icon rounded="!rounded-full" class="m-1 text-neutral-1-500">
-                      <i class="tdsi-emotion-line"></i>
+                      <i class="tdsi-emotion-line text-neutral-1-300"></i>
                     </button>
                   </div>         
                 <div (click)="clickshowmessage()" class=" text-body-2  font-normal px-4 py-2 hover:bg-primary-2 bg-primary-1 text-white mb-1 rounded-t-xl rounded-l-xl">
@@ -678,40 +678,30 @@
               placeholder="Nhập nội dung tin nhắn"></textarea>
           </div>
           <div class="flex justify-between items-center">
-            <ul class="flex">
+            <ul class="flex gap-1">
             <li>
-              <button tds-flat-button class="p-2.5 hover:bg-neutral-1-200 rounded-full ">
-                <span class="flex items-center text-neutral-1-300">
-                  <i class="tdsi-like-line text-lg leading-none "></i>
-                </span>
+              <button tds-button-flat-icon >
+                <i class="tdsi-like-line text-neutral-1-300"></i>
               </button>
             </li>
             <li>
-              <button tds-flat-button class="p-2.5 hover:bg-neutral-1-200 rounded-full ">
-                <span class="flex items-center text-neutral-1-300">
-                  <i class="tdsi-image-line text-lg leading-none "></i>
-                </span>
+              <button tds-button-flat-icon >
+                <i class=" tdsi-image-line text-neutral-1-300"></i>
               </button>
             </li>
             <li>
-              <button tds-flat-button class="p-2.5 hover:bg-neutral-1-200 rounded-full ">
-                <span class="flex items-center text-neutral-1-300">
-                  <i class="tdsi-emotion-line text-lg leading-none "></i>
-                </span>
+              <button tds-button-flat-icon>
+                <i class="tdsi-emotion-line text-neutral-1-300"></i>
               </button>
             </li>
             <li>
-              <button tds-flat-button class="p-2.5 hover:bg-neutral-1-200 rounded-full ">
-                <span class="flex items-center text-neutral-1-300">
-                  <i class="tdsi-product-line text-lg leading-none "></i>
-                </span>
+              <button tds-button-flat-icon c>
+                <i class="tdsi-message-template-line text-neutral-1-300"></i>
               </button>
             </li> 
               <li>
-                <button tds-flat-button class="p-2.5 hovers:bg-neutral-1-200 rounded-full ">
-                  <span class="flex items-center text-neutral-1-300">
-                    <i class="tdsi-message-template-line text-lg leading-none "></i>
-                  </span>
+                <button tds-button-flat-icon >
+                  <i class="tdsi-product-line text-neutral-1-300"></i>
                 </button>
               </li>
             </ul>
@@ -724,7 +714,7 @@
           </div>
         </div>
       </div>
-      <div class="  2xl:w-1/2  lg:hidden md:hidden sm:hidden   h-full flex flex-col">
+      <div class=" 2xl:w-1/2  lg:hidden xl:w-1/2  h-full flex flex-col">
         <!-- tab menu message -->
           <div class="flex  text-title-1 font-semibold  border-b border-neutral-2-200 h-16">
             <button (click)="clickEvent()"

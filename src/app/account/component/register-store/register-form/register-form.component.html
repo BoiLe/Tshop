@@ -5,9 +5,10 @@
       <tds-label>Tên shop</tds-label>
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
-    <tds-form-field class="w-full col-span-2">
-      <input tdsInput autocomplete="off" placeholder="Vui lòng nhập tên shop" formControlName="noiDung"
-        [required]='true' />
+    <tds-form-field class="w-full "
+   >
+    <input tdsInput size="sm"  type="text" autocomplete="off" placeholder="Nhập tên shop" formControlName="taiKhoan" [required]='true'
+    class="appearance-none   text-body-1 text-neutral-1-400  font-normal" />
       <tds-error>Vui lòng chọn nội dung</tds-error>
     </tds-form-field>
   </div>
@@ -16,9 +17,9 @@
       <tds-label>Tỉnh Thành</tds-label>
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
-    <tds-form-field>
-      <tds-select  valueField="id" textField="name" [open]="true" [(ngModel)]="listSelected" placeholder='select item'
-       disabledField="isActive" [data]="listData" mode="tags">
+    <tds-form-field class="w-full">
+      <tds-select size="lg" valueField="id" textField="name"  placeholder='Chọn tỉnh thành'
+       disabledField="isActive" [data]="listData" mode="tags" class=" text-body-1 text-neutral-1-400  font-normal">
       </tds-select>
       <tds-error>Validation message text</tds-error>
     </tds-form-field>
@@ -29,9 +30,9 @@
       <tds-label>Quận huyện</tds-label>
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
-    <tds-form-field>
-      <tds-select valueField="id" textField="name" [(ngModel)]="listSelected" placeholder='select item'
-        (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags">
+    <tds-form-field class="w-full">
+      <tds-select size="lg" valueField="id" textField="name" placeholder='Chọn quận huyện'
+        (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags" class=" text-body-1 text-neutral-1-400  font-normal">
       </tds-select>
     </tds-form-field>
   
@@ -41,8 +42,8 @@
       <tds-label>Phường xã</tds-label>
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
-    <tds-form-field>
-      <tds-select valueField="id" textField="name" [(ngModel)]="listSelected" placeholder='select item'
+    <tds-form-field class="w-full">
+      <tds-select placeholder="lg" size="lg" valueField="id" textField="name"  placeholder='Chọn phường xã'
         (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags">
       </tds-select>
     </tds-form-field>
@@ -54,8 +55,21 @@
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
     <tds-form-field class="w-full">
-      <input tdsInput autocomplete="off" placeholder="Địa chỉ" formControlName="noiDung" [required]='true' />
+      <input tdsInput  type="text" autocomplete="off" placeholder="Nhập địa chỉ" formControlName="taiKhoan" [required]='true'
+      class="appearance-none   text-body-1 text-neutral-1-400  font-normal" />
       <tds-error>Vui lòng chọn nội dung</tds-error>
+    </tds-form-field>
+  
+  </div>
+  <div class=" w-full mb-6">
+    <div class=" flex items-center mb-2">
+      <tds-label>Địa chỉ email</tds-label>
+      
+    </div>
+    <tds-form-field class="w-full  text-body-1 text-neutral-1-400  font-normal">
+      <tds-select size="lg" valueField="id" textField="name"  placeholder='Nhập email liên hệ của shop'
+        (ngModelChange)="onModelChange($event)" [data]="listData" mode="tags" class=" text-body-1 text-neutral-1-400  font-normal">
+      </tds-select>
     </tds-form-field>
   
   </div>
@@ -66,13 +80,14 @@
       <span class="ml-1 text-error-500 text-body-2 font-semibold ng-tns-c193-48 ng-star-inserted">*</span>
     </div>
     <tds-form-field class="w-full ">
-      <input tdsInput autocomplete="off" placeholder="Địa chỉ" formControlName="noiDung" [required]='true' />
+      <input tdsInput size="sm"  type="text" autocomplete="off" placeholder="Nhập số điện thoại liên hệ shop" formControlName="taiKhoan" [required]='true'
+      class="appearance-none   text-body-1 text-neutral-1-400  font-normal"/>
       <tds-error>Vui lòng chọn nội dung</tds-error>
     </tds-form-field>
   </div>
   
   <button routerLink="/tai-khoan/dang-nhap" tds-flat-button
-    class="w-full bg-primary-1 text-white hover:bg-primary-2 focus:text-primary-1   rounded-md text-title-1">
+    class="w-full bg-primary-1 text-white hover:bg-primary-2 focus:text-primary-1  font-medium  rounded-md text-title-1">
     Đăng nhập
   </button>
 

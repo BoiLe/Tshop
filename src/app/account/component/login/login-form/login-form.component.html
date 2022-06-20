@@ -2,19 +2,19 @@
 <form class="mb-9" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
  <tds-label class="font-medium text-body-2">Tài khoản</tds-label>
  <tds-form-field class="w-full mt-2">
-  <input tdsInput autocomplete="off" placeholder="Nhập tài khoản" formControlName="taiKhoan" [required]='true'
+  <input tdsInput  type="text" autocomplete="off" placeholder="Nhập tài khoản" formControlName="taiKhoan" [required]='true'
    class="appearance-none   text-body-1 text-neutral-1-400  font-normal" />
   <tds-error>Vui lòng nhập tài khoản</tds-error>
  </tds-form-field>
  <tds-label class="mt-5 font-medium text-body-2">Mật khẩu</tds-label>
  <tds-form-field class="w-full mt-2">
   <input tdsInput placeholder="Nhập mật khẩu" type="password" autocomplete="new-password" formControlName="matKhau"
-   [required]='true' class="appearance-none  text-body-1 text-neutral-1-400  font-normal" />
+   [required]='true' class="appearance-none   text-body-1 text-neutral-1-400 border-primary-1  font-normal focus:border-transparent focus:ring-0" />
   <tds-error>Vui lòng nhập mật khẩu</tds-error>
  </tds-form-field>
  <div class="flex justify-between items-center  mt-5">
   <tds-checkbox [checked]="true" class="text-neutral-1-700 truncate">Ghi nhớ mật khẩu</tds-checkbox>
-  <a [routerLink]="['/tai-khoan/quen-mat-khau']" class="text-body-1 font-regular text-primary-1 truncate">Quên
+  <a [routerLink]="['/tai-khoan/quen-mat-khau']" class="text-body-1 font-regular border-primary-1  text-primary-1 truncate hover:ring-0">Quên
    mật khẩu?</a>
  </div>
  <div class="w-full mt-8">

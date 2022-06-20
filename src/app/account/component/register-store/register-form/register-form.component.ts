@@ -6,7 +6,7 @@ import { TDSSafeAny } from 'tmt-tang-ui';
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
   styleUrls: ['./register-form.component.scss'],
-  host: { class: ' w-1/2   bg-white border border-neutral-2-200 shadow-xl p-8  overflow-y-auto' },
+  host: { class: ' w-1/2  border border-neutral-2-200 shadow-xl p-8  overflow-y-auto' },
 })
 export class RegisterFormComponent implements OnInit {
   public listSelected = [];

@@ -175,95 +175,90 @@
 
 
             </div>
-            <div class="flex flex-col p-4  border rounded-md">
-              <div class="flex justify-between border-b py-4">
-                <div class="text-header-1 font-semibold text-neutral-1-900">Sản phẩm</div>
-                <div class="flex">
+         <div class="">
+          <tds-collapse [expandIconPosition]="'right'">
+            <tds-collapse-panel [header]="headerTpl" [active]="false" [disabled]=false 
+            [expandedIcon]="'tdsi-arrow-up-line'" [extra]="extraTpl"> 
+                
+            <div class="flex flex-col text-body-2 font-medium text-neutral-1-900 py-4">
+              <div class="flex mb-4">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 1:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
+              </div>
+              <div class="flex mb-4">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 2:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
+              </div>
+              <div class="flex ">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 3:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
+              </div>
+            </div>
+            </tds-collapse-panel>
+        </tds-collapse>
+            <ng-template #headerTpl>
+              <div class="flex items-center text-header-1 font-semibold text-neutral-1-900">
+                  Sản phẩm
+              </div>
+            </ng-template>
+            <ng-template #extraTpl>
+                <div class="flex gap-2">
                   <button>
-                    <div class="flex mr-2">
+                    <div class="flex">
                       <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
                     </div>
                   </button>
-                  <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M11.8284 5.00334L14.88 8.06962L7.15561 15.8311L4.10571 12.7648L11.8284 5.00334ZM17.1955 4.26365L15.8346 2.8962C15.5814 2.64248 15.2384 2.5 14.8809 2.5C14.5233 2.5 14.1803 2.64248 13.9272 2.8962L12.6219 4.2077L15.6736 7.27398L17.1955 5.74477C17.3905 5.54812 17.5 5.28182 17.5 5.00421C17.5 4.7266 17.3905 4.46031 17.1955 4.26365ZM2.5081 17.0753C2.49547 17.1331 2.49764 17.1931 2.51441 17.2499C2.53119 17.3066 2.56201 17.3581 2.60401 17.3996C2.646 17.4411 2.69779 17.4712 2.75452 17.4871C2.81126 17.503 2.87108 17.5042 2.92839 17.4906L6.32809 16.6617L3.28254 13.5954L2.5081 17.0753Z"
-                        fill="#858F9B" />
-                    </svg>
+                  <button tds-button-outline-icon color="secondary">
+                    <i class="tdsi-edit-fill"></i>
                   </button>
-                  <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.5448 5.86194L15.1973 4.81944C15.1632 4.71709 15.0978 4.62806 15.0103 4.56495C14.9228 4.50183 14.8177 4.46784 14.7098 4.46777H5.64314C5.53526 4.46784 5.43013 4.50183 5.34264 4.56495C5.25515 4.62806 5.18974 4.71709 5.15564 4.81944L4.80814 5.86194C4.78995 5.91674 4.78502 5.97509 4.79375 6.03217C4.80249 6.08926 4.82465 6.14345 4.85841 6.19031C4.89216 6.23716 4.93656 6.27534 4.98794 6.3017C5.03932 6.32806 5.09623 6.34185 5.15398 6.34194H15.199C15.2567 6.34185 15.3136 6.32806 15.365 6.3017C15.4164 6.27534 15.4608 6.23716 15.4945 6.19031C15.5283 6.14345 15.5505 6.08926 15.5592 6.03217C15.5679 5.97509 15.563 5.91674 15.5448 5.86194Z"
-                        fill="#858F9B" />
-                      <path
-                        d="M6.42554 16.9698C6.44482 17.143 6.52731 17.3031 6.65724 17.4193C6.78716 17.5356 6.95538 17.5998 7.1297 17.5998H13.1639C13.3382 17.5998 13.5064 17.5356 13.6363 17.4193C13.7663 17.3031 13.8488 17.143 13.868 16.9698L14.9447 7.27979H5.34888L6.42554 16.9698Z"
-                        fill="#858F9B" />
-                      <path
-                        d="M9.23733 2.99053C9.23733 2.88312 9.28 2.78011 9.35595 2.70416C9.4319 2.6282 9.53491 2.58553 9.64232 2.58553H11.019C11.1264 2.58553 11.2294 2.6282 11.3054 2.70416C11.3813 2.78011 11.424 2.88312 11.424 2.99053V3.53637H12.3582V2.99053C12.3577 2.6355 12.2165 2.29513 11.9654 2.04409C11.7144 1.79304 11.374 1.65181 11.019 1.65137H9.64483C9.28979 1.65181 8.94942 1.79304 8.69837 2.04409C8.44733 2.29513 8.30611 2.6355 8.30566 2.99053V3.53637H9.23983L9.23733 2.99053Z"
-                        fill="#858F9B" />
-                    </svg></button>
-                  <button class="p-2 mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.0035 6.66683L15.8333 12.2976L14.7601 13.3335L10.0035 8.73871L5.24162 13.3335L4.16665 12.2976L10.0035 6.66683Z"
-                        fill="#2C333A" />
-                    </svg>
-                  </button>
+                <button tds-button-outline-icon color="secondary">
+                  <i class="tdsi-trash-fill"></i>
+                </button> 
                 </div>
+            </ng-template>
+         </div>
+         <div class="">
+          <tds-collapse [expandIconPosition]="'right'">
+            <tds-collapse-panel [header]="headerTpl1" [active]="false" [disabled]=false 
+            [expandedIcon]="'tdsi-arrow-up-line'" [extra]="extraTpl1"> 
+                
+            <div class="flex flex-col text-body-2 font-medium text-neutral-1-900 py-4">
+              <div class="flex mb-4">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 1:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
               </div>
-
-              <div class="flex flex-col text-body-2 font-medium text-neutral-1-900 py-4">
-                <div class="flex mb-4">
-                  <div class="mr-1.5 w-48">Nội dung tin nhắn 1:</div>
-                  <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
-                </div>
-                <div class="flex mb-4">
-                  <div class="mr-1.5 w-48">Nội dung tin nhắn 2:</div>
-                  <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
-                </div>
-                <div class="flex ">
-                  <div class="mr-1.5 w-48">Nội dung tin nhắn 3:</div>
-                  <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
-                </div>
+              <div class="flex mb-4">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 2:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
+              </div>
+              <div class="flex ">
+                <div class="mr-1.5 w-48">Nội dung tin nhắn 3:</div>
+                <div class="font-regular">Xin chào! sản phẩm shop đã hết hàng nhé bạn</div>
               </div>
             </div>
-            <div class="flex justify-between items-center border p-4 rounded-md">
-              <div class="text-header-1 font-semibold text-neutral-1-900">Giá sản phẩm</div>
-              <div class="flex">
-                <button>
-                  <div class="flex mr-2">
-                  <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
-                  </div>
-                </button>
-                <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.8284 5.00334L14.88 8.06962L7.15561 15.8311L4.10571 12.7648L11.8284 5.00334ZM17.1955 4.26365L15.8346 2.8962C15.5814 2.64248 15.2384 2.5 14.8809 2.5C14.5233 2.5 14.1803 2.64248 13.9272 2.8962L12.6219 4.2077L15.6736 7.27398L17.1955 5.74477C17.3905 5.54812 17.5 5.28182 17.5 5.00421C17.5 4.7266 17.3905 4.46031 17.1955 4.26365ZM2.5081 17.0753C2.49547 17.1331 2.49764 17.1931 2.51441 17.2499C2.53119 17.3066 2.56201 17.3581 2.60401 17.3996C2.646 17.4411 2.69779 17.4712 2.75452 17.4871C2.81126 17.503 2.87108 17.5042 2.92839 17.4906L6.32809 16.6617L3.28254 13.5954L2.5081 17.0753Z"
-                      fill="#858F9B" />
-                  </svg>
-                </button>
-                <button class="p-2 border rounded-md mr-2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.5448 5.86194L15.1973 4.81944C15.1632 4.71709 15.0978 4.62806 15.0103 4.56495C14.9228 4.50183 14.8177 4.46784 14.7098 4.46777H5.64314C5.53526 4.46784 5.43013 4.50183 5.34264 4.56495C5.25515 4.62806 5.18974 4.71709 5.15564 4.81944L4.80814 5.86194C4.78995 5.91674 4.78502 5.97509 4.79375 6.03217C4.80249 6.08926 4.82465 6.14345 4.85841 6.19031C4.89216 6.23716 4.93656 6.27534 4.98794 6.3017C5.03932 6.32806 5.09623 6.34185 5.15398 6.34194H15.199C15.2567 6.34185 15.3136 6.32806 15.365 6.3017C15.4164 6.27534 15.4608 6.23716 15.4945 6.19031C15.5283 6.14345 15.5505 6.08926 15.5592 6.03217C15.5679 5.97509 15.563 5.91674 15.5448 5.86194Z"
-                      fill="#858F9B" />
-                    <path
-                      d="M6.42554 16.9698C6.44482 17.143 6.52731 17.3031 6.65724 17.4193C6.78716 17.5356 6.95538 17.5998 7.1297 17.5998H13.1639C13.3382 17.5998 13.5064 17.5356 13.6363 17.4193C13.7663 17.3031 13.8488 17.143 13.868 16.9698L14.9447 7.27979H5.34888L6.42554 16.9698Z"
-                      fill="#858F9B" />
-                    <path
-                      d="M9.23733 2.99053C9.23733 2.88312 9.28 2.78011 9.35595 2.70416C9.4319 2.6282 9.53491 2.58553 9.64232 2.58553H11.019C11.1264 2.58553 11.2294 2.6282 11.3054 2.70416C11.3813 2.78011 11.424 2.88312 11.424 2.99053V3.53637H12.3582V2.99053C12.3577 2.6355 12.2165 2.29513 11.9654 2.04409C11.7144 1.79304 11.374 1.65181 11.019 1.65137H9.64483C9.28979 1.65181 8.94942 1.79304 8.69837 2.04409C8.44733 2.29513 8.30611 2.6355 8.30566 2.99053V3.53637H9.23983L9.23733 2.99053Z"
-                      fill="#858F9B" />
-                  </svg></button>
-                <button class="p-2 mr-2 h-0.">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.99643 13.3337L4.16663 7.70293L5.23984 6.66699L9.99643 11.2618L14.7583 6.66699L15.8333 7.70293L9.99643 13.3337Z"
-                      fill="#858F9B" />
-                  </svg>
-                </button>
+            </tds-collapse-panel>
+        </tds-collapse>
+            <ng-template #headerTpl1>
+              <div class="flex items-center text-header-1 font-semibold text-neutral-1-900">
+                  Giá sản phẩm
               </div>
-            </div>
+            </ng-template>
+            <ng-template #extraTpl1>
+                <div class="flex gap-2">
+                  <button>
+                    <div class="flex">
+                      <tds-switch size="lg" class=" text-body-2 font-regular text-neutral-1-900"></tds-switch>
+                    </div>
+                  </button>
+                  <button tds-button-outline-icon color="secondary">
+                    <i class="tdsi-edit-fill"></i>
+                  </button>
+                <button tds-button-outline-icon color="secondary">
+                  <i class="tdsi-trash-fill"></i>
+                </button> 
+                </div>
+            </ng-template>
+         </div>
           </div>
         </div>
       </ng-template>
