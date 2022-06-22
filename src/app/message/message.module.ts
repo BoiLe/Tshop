@@ -10,11 +10,13 @@ import { ModalUnblockComponent } from './component/modal-unblock/modal-unblock.c
 import { RemoveMessageComponent } from './component/remove-message/remove-message.component';
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSSwitchModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
+import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFilterStatusModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSSwitchModule, TDSTableModule, TDSTabsModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ProductListComponent } from './component/product-list/product-list.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 @NgModule({
-  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent],
+  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, ProductListComponent, ProductDetailComponent],
   imports: [
     RouterModule,
     CommonModule,
@@ -37,7 +39,11 @@ import { BrowserModule } from '@angular/platform-browser';
     TDSSwitchModule,
     TDSModalModule,
     TDSCollapseModule,
-    TDSBadgeModule
+    TDSBadgeModule,
+    TDSTableModule, 
+    TDSTabsModule,
+    TDSFilterStatusModule
+    
 
 
   ],

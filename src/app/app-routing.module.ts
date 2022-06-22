@@ -19,6 +19,8 @@ import { ModalBlockComponent } from './message/component/modal-block/modal-block
 import { ModalUnblockComponent } from './message/component/modal-unblock/modal-unblock.component';
 import { RemoveMessageComponent } from './message/component/remove-message/remove-message.component';
 import { ModalCusComponent } from './message/component/modal-cus/modal-cus.component';
+import { ProductListComponent } from './message/component/product-list/product-list.component';
+import { ProductDetailComponent } from './message/component/product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/tai-khoan/dang-nhap', pathMatch: 'full' },
@@ -62,19 +64,21 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'nhan-tin',
+    path: 'admin',
     component: LayoutAdminComponent,
     children: [
-      { path: '', redirectTo: '/nhan-tin/chat', pathMatch: 'full' },
+      { path: '', redirectTo: '/admin/chat', pathMatch: 'full' },
       { path: 'chat', component: ChatComponent },
       { path: 'setting', component: SettingMessageComponent },
+      { path: 'product', component: ProductListComponent },
+      { path: 'product-detail', component: ProductDetailComponent },
     ],
   },
   { path: 'modal', component: ModalBlockComponent },
   { path: 'unmodal', component: ModalUnblockComponent },
   { path: 'remove', component: RemoveMessageComponent },
   { path: 'list-message', component: ModalCusComponent },
-  { path: '**', redirectTo: 'tai-khoan/dang-nhap' },
+  { path: '**', redirectTo: 'admin/chat' },
 ];
 
 @NgModule({

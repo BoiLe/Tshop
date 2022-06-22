@@ -1,5 +1,4 @@
-import { LayoutAdminComponent } from './../message/layout-admin/layout-admin.component';
-import { ChatComponent } from './../message/component/chat/chat.component';
+
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +13,7 @@ import { ChangePassComponent } from './component/forget-pass/change-pass/change-
 import { RegisterComponent } from './component/register/register.component';
 import { PhoneComponent } from './component/register/phone/phone.component';
 import { PinComponent } from './component/register/pin/pin.component';
-import { TDSAvatarModule, TDSButtonModule, TDSCardModule, TDSCheckBoxModule, TDSDividerModule, TDSDropDownModule, TDSError, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSLabel, TDSSelectModule } from 'tmt-tang-ui';
+import { TDSAvatarModule, TDSButtonModule, TDSCardModule, TDSCheckBoxModule, TDSDividerModule, TDSDropDownModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSSelectModule } from 'tmt-tang-ui';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './component/login/login-form/login-form.component';
 import { RegisterFormComponent } from './component/register-store/register-form/register-form.component';

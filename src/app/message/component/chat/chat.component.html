@@ -2,7 +2,7 @@
   <div class="py-2.5 px-4 border-b border-neutral-2-100">
     <div class="text-caption-1 font-regular text-neutral-1-400 flex items-center">
     <tds-breadcrumb>
-      <tds-breadcrumb-item><a [routerLink]="['/nhan-tin/chat']">Trò truyện</a></tds-breadcrumb-item>
+      <tds-breadcrumb-item><a [routerLink]="['/admin/chat']">Trò truyện</a></tds-breadcrumb-item>
       <tds-breadcrumb-item>Nhắn tin</tds-breadcrumb-item>
     </tds-breadcrumb>
     </div>
@@ -733,7 +733,7 @@
             <!-- informatinon custummer -->
             <tds-collapse [bordered]="false" [expandIconPosition]="'right'">
               <tds-collapse-panel [header]="headerTpl" header="This is panel header" [active]="false" [disabled]=false
-                [expandedIcon]="'tdsi-arrow-up-line'">
+                [expandedIcon]="'tdsi-arrow-up-line'" >
                 <ng-template #headerTpl>
                   <div class="flex items-center  w-full  font-medium  text-body-2  appearance-none rounded text-neutral-1-900 focus:bg-white focus:outline-none">
                     <span class="tdsi-user-fill text-white bg-primary-1 p-1 rounded-full text-xl leading-none mr-3"></span>
