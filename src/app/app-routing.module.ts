@@ -21,6 +21,7 @@ import { RemoveMessageComponent } from './message/component/remove-message/remov
 import { ModalCusComponent } from './message/component/modal-cus/modal-cus.component';
 import { ProductListComponent } from './message/component/product-list/product-list.component';
 import { ProductDetailComponent } from './message/component/product-detail/product-detail.component';
+import { OrderDetailComponent } from './message/component/order-detail/order-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/tai-khoan/dang-nhap', pathMatch: 'full' },
@@ -70,8 +71,10 @@ const routes: Routes = [
       { path: '', redirectTo: '/admin/chat', pathMatch: 'full' },
       { path: 'chat', component: ChatComponent },
       { path: 'setting', component: SettingMessageComponent },
-      { path: 'product', component: ProductListComponent },
-      { path: 'product-detail', component: ProductDetailComponent },
+      { path: 'order', component: ProductListComponent,   
+      children: [
+        { path: 'order-detail', component: OrderDetailComponent },
+      ] },
     ],
   },
   { path: 'modal', component: ModalBlockComponent },

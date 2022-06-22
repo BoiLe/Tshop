@@ -132,7 +132,7 @@ export class ProductListComponent implements OnInit {
 
         },
         {
-            id: 7,
+            id: 8,
             IdOrder: 'DH 023165',
             Customer: "Sun Happy",
             Phone:"012312321",
@@ -143,7 +143,46 @@ export class ProductListComponent implements OnInit {
             Date:"30/08/2021",
             Multilation:"In hóa đơn",
 
-        }
+        },
+        {
+            id: 9,
+            IdOrder: 'DH 023165',
+            Customer: "Sun Happy",
+            Phone:"012312321",
+            Total: '1.500.000',
+            StatusOrder: 'Đã giao hàng',
+            StatusCount: 'Đã thanh toán',
+            Trading:"Giao hàng tiết kiệm",
+            Date:"30/08/2021",
+            Multilation:"In hóa đơn",
+
+        },
+        {
+            id: 10,
+            IdOrder: 'DH 023165',
+            Customer: "Sun Happy",
+            Phone:"012312321",
+            Total: '1.500.000',
+            StatusOrder: 'Đã giao hàng',
+            StatusCount: 'Đã thanh toán',
+            Trading:"Giao hàng tiết kiệm",
+            Date:"30/08/2021",
+            Multilation:"In hóa đơn",
+
+        },
+        {
+            id: 11,
+            IdOrder: 'DH 023165',
+            Customer: "Sun Happy",
+            Phone:"012312321",
+            Total: '1.500.000',
+            StatusOrder: 'Đã giao hàng',
+            StatusCount: 'Đã thanh toán',
+            Trading:"Giao hàng tiết kiệm",
+            Date:"30/08/2021",
+            Multilation:"In hóa đơn",
+
+        },
     ];
     tabsIcon2 = [
       {

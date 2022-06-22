@@ -8,9 +8,10 @@
       </div>
       <span class="text-header-1 text-neutral-1-900 font-semibold">Danh sách đơn hàng</span>
     </div>
-  <div class="flex items-start  justify-center h-full w-full bg-neutral-1-50 p-4">
     
-        <div class="bg-white border border-neutral-2-200  rounded-md p-4">
+  <div class="flex items-start  justify-center h-full w-full bg-neutral-1-50 p-4 overflow-hidden">
+  
+        <div class="bg-white border border-neutral-2-200 h-full  rounded-md p-4 overflow-auto  tds-custom-scroll flex flex-col" >
             <div class="flex justify-between items-center">
               <tds-filter-status [ngModel]='1' (selectChange)="onSelectChange($event)">
 
@@ -63,7 +64,7 @@
                     <ng-container *ngFor="let data of table.data">
                         <tr>
                             <td [expand]="expandSet.has(data.id)" (expandChange)="onExpandChange(data.id, $event)"></td>
-                            <td><a tds-link class="text-primary-1 text-body-2 font-regular ">{{ data.IdOrder }}</a></td>
+                            <td><a tds-link class="text-primary-1 text-body-2 font-regular "  [routerLink]="['/admin/order/order-detail']">{{ data.IdOrder }}</a></td>
                             <td><div class="flex flex-col">
                               <div class="text-body-2 font-regular text-neutral-1-900">
                                 {{ data.Customer }}
@@ -82,11 +83,7 @@
                         </tr>
                         <tr [expand]="expandSet.has(data.id)"  class="border-b border-neutral-2-100 text-neutral-1-900 " >
                            
-                          <div class="flex justify-between px-4 py-3.5 border-l border-t border-r rounded-t-md">
-                            <div class="text-header-1 text-neutral-1-900 font-semibold">Thông tin đơn hàng</div>
-                            <button tds-button color="primary" class="text-body-2 font-medium">In hóa đơn</button>
-                          </div>
-                          <tds-table #borderedTable  [listData]="productData"   bordered  >
+                          <tds-table #borderedTable  [listData]="productData" [footer]='footer' [title]="title"  bordered  [showPagination]="false" >
                             <thead>
                                 <tr>
                                   <th width="76px">Ảnh</th>
@@ -114,13 +111,34 @@
                                     <u class="text-neutral-1-400 font-regular">đ</u>
                                     <div class="text-body-2 font-regular text-neutral-1-900">{{ data.total }}</div>
                                   </div></td>
-                                 
-                                 
-                                  
                                 </tr>
                             </tbody>
                         </tds-table>
-                        <ng-template #Header1  [ngOutletContext]="context"></ng-template>
+                        <ng-template #footer  [ngOutletContext]="context">
+                          <div class="flex justify-end pr-14 py-4">
+                            <div class="flex flex-col gap-4">
+                              <div class="flex justify-between">
+                                <div class="mr-20 text-body-2 font-regular text-neutral-1-900">2 sản phẩm </div>
+                                <div class="flex gap-1 text-body-2 font-medium text-neutral-1-900"> <u  class="text-neutral-1-400 font-regular">đ</u>
+                                  2.400.000</div>
+                              </div>
+                              <div class="flex justify-between">
+                                <div class="text-body-2 font-regular text-neutral-1-900">Phí giao hàng</div>
+                                <div class="flex gap-1  text-body-2 font-medium text-neutral-1-900"> <u  class="text-neutral-1-400 font-regular">đ</u> 2.400.000</div>
+                              </div>
+                              <div class="flex justify-between">
+                                <div class="text-title-1 font-medium text-neutral-1-900">Tổng tiền </div>
+                                <div class="flex gap-1 text-header-1 text-primary-1 font-semibold"> <u  >đ</u> 2.700.000</div>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                        <ng-template #title  [ngOutletContext]="context" >
+                          <div class="flex justify-between ">
+                            <div class="text-header-1 text-neutral-1-900 font-semibold">Thông tin đơn hàng</div>
+                            <button tds-button color="primary" class="text-body-2 font-medium">In hóa đơn</button>
+                          </div>
+                        </ng-template>
                      
                         </tr> 
                     </ng-container>

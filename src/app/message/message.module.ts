@@ -15,8 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { OrderDetailComponent } from './component/order-detail/order-detail.component';
 @NgModule({
-  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, ProductListComponent, ProductDetailComponent],
+  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, ProductListComponent, ProductDetailComponent, OrderDetailComponent],
   imports: [
     RouterModule,
     CommonModule,
