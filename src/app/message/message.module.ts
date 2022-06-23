@@ -10,14 +10,19 @@ import { ModalUnblockComponent } from './component/modal-unblock/modal-unblock.c
 import { RemoveMessageComponent } from './component/remove-message/remove-message.component';
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFilterStatusModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSSwitchModule, TDSTableModule, TDSTabsModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
+import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFilterStatusModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSStepsModule, TDSSwitchModule, TDSTableModule, TDSTabsModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ProductListComponent } from './component/product-list/product-list.component';
-import { ProductDetailComponent } from './component/product-detail/product-detail.component';
-import { OrderDetailComponent } from './component/order-detail/order-detail.component';
+import { OrderListComponent } from './component/order-list/order-list.component';
+import { OrderComponent } from './component/order-list/order/order.component';
+import { OrderDetailComponent } from './component/order-list/order-detail/order-detail.component';
+import { OrderRefundComponent } from './component/order-list/order-refund/order-refund.component';
+import { OrderRefundDetailComponent } from './component/order-list/order-refund/order-refund-detail/order-refund-detail.component';
+import { OrderRefundListComponent } from './component/order-list/order-refund/order-refund-list/order-refund-list.component';
+
+
 @NgModule({
-  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, ProductListComponent, ProductDetailComponent, OrderDetailComponent],
+  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, OrderListComponent, OrderComponent, OrderDetailComponent, OrderRefundComponent, OrderRefundDetailComponent, OrderRefundListComponent, ],
   imports: [
     RouterModule,
     CommonModule,
@@ -43,7 +48,9 @@ import { OrderDetailComponent } from './component/order-detail/order-detail.comp
     TDSBadgeModule,
     TDSTableModule, 
     TDSTabsModule,
-    TDSFilterStatusModule
+    TDSFilterStatusModule,
+    TDSStepsModule
+    
     
 
 

@@ -73,11 +73,11 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-bag-fill",
       listChild: [
         {
-          link: '/admin/order',
+          link: '/admin/order/order-list',
           name: 'Danh sách đơn hàng'
         },
         {
-          link: '/admin/2321312323',
+          link: '/admin/order/order-refund/order-refund-list',
           name: 'Trả hàng/hoàn tiền'
         },
         
