@@ -57,7 +57,7 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-message-fill",
       listChild: [
         {
-          link: '/admin/chat',
+          link: '/admin',
           name: 'Danh sách tin nhắn'
         },
         {
@@ -73,11 +73,11 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-bag-fill",
       listChild: [
         {
-          link: '/admin/order/order-list',
+          link: '/admin/order',
           name: 'Danh sách đơn hàng'
         },
         {
-          link: '/admin/order/order-refund/order-refund-list',
+          link: '/admin/order/order-refund',
           name: 'Trả hàng/hoàn tiền'
         },
         

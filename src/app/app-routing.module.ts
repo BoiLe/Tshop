@@ -73,18 +73,17 @@ const routes: Routes = [
     component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: '/admin/chat', pathMatch: 'full' },
-      { path: 'chat', component: ChatComponent },
+      { path: 'chat', component: ChatComponent,  },
       { path: 'setting', component: SettingMessageComponent },
       { path: 'order', component: OrderListComponent,   
       children: [   
-        { path: '', redirectTo: '/order/order-list', pathMatch: 'full' },
-        { path: 'order-list', component: OrderComponent },
+      
+        { path: '', component: OrderComponent },
         { path: 'order-detail', component: OrderDetailComponent },
         { path: 'order-refund', component: OrderRefundComponent,
         children: [
-        { path: '', redirectTo: '/order-refund/order-refund-list', pathMatch: 'full' },
+          { path: '', component: OrderRefundListComponent },    
         { path: 'order-refund-detail', component: OrderRefundDetailComponent },
-        { path: 'order-refund-list', component: OrderRefundListComponent }
                 
         ] 
       },

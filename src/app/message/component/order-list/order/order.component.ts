@@ -63,7 +63,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -76,7 +76,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+          
 
       },
       {
@@ -89,7 +89,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -102,7 +102,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -115,7 +115,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -128,7 +128,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -141,7 +141,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
       {
@@ -154,7 +154,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+          
 
       },
       {
@@ -167,7 +167,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Đã thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+          
 
       },
       {
@@ -180,7 +180,7 @@ export class OrderComponent implements OnInit {
           StatusCount: 'Chưa thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
-          Multilation:"In hóa đơn",
+         
 
       },
   ];
