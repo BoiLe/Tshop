@@ -61,7 +61,7 @@ export class LayoutAdminComponent implements OnInit {
           name: 'Danh sách tin nhắn'
         },
         {
-          link: '/admin/setting',
+          link: '/admin/setting-message',
           name: 'Thiết lập nhanh'
         },
 
@@ -73,7 +73,7 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-bag-fill",
       listChild: [
         {
-          link: '/admin/order',
+          link: '/admin/order/order-list',
           name: 'Danh sách đơn hàng'
         },
         {
@@ -88,23 +88,15 @@ export class LayoutAdminComponent implements OnInit {
       name: 'Sản phẩm',
       icon: "tdsi-product-fill",
       listChild: [
-        {
-          link: '/menu',
-          name: 'Menu'
-        },
+        
         {
           link: '/pagination',
-          name: 'Pagination'
+          name: 'Đánh giá sản phẩm'
         },
         {
           link: '/step',
-          name: 'Step',
-          tag: {
-            type: 'outline',
-            status: 'primary',
-            rounded: 'rounded-full',
-            text: 'primary',
-          }
+          name: 'Thêm sản phẩm',
+          
         }
       ]
     },
@@ -115,21 +107,16 @@ export class LayoutAdminComponent implements OnInit {
       listChild: [
         {
           link: '/menu',
-          name: 'Menu'
+          name: 'Đánh giá shop'
         },
         {
           link: '/pagination',
-          name: 'Pagination'
+          name: 'Đánh giá sản phẩm'
         },
         {
           link: '/step',
-          name: 'Step',
-          tag: {
-            type: 'outline',
-            status: 'primary',
-            rounded: 'rounded-full',
-            text: 'primary',
-          }
+          name: 'Đánh giá vận chuyển',
+         
         }
       ]
     },
@@ -145,21 +132,21 @@ export class LayoutAdminComponent implements OnInit {
       listChild: [
         {
           link: '/menu',
-          name: 'Menu'
+          name: 'Mã giảm giá'
         },
         {
           link: '/pagination',
-          name: 'Pagination'
+          name: 'Sản phẩm giảm giá'
         },
         {
           link: '/step',
-          name: 'Step',
-          tag: {
-            type: 'outline',
-            status: 'primary',
-            rounded: 'rounded-full',
-            text: 'primary',
-          }
+          name: 'Giảm giá vận chuyển',
+          
+        },
+        {
+          link: '/step',
+          name: 'Cài đặng mã giảm giá',
+          
         }
       ]
     },
@@ -175,21 +162,16 @@ export class LayoutAdminComponent implements OnInit {
       listChild: [
         {
           link: '/menu',
-          name: 'Menu'
+          name: 'Hồ sơ shop'
         },
         {
           link: '/pagination',
-          name: 'Pagination'
+          name: 'Trang trí gian hàng'
         },
         {
           link: '/step',
-          name: 'Step',
-          tag: {
-            type: 'outline',
-            status: 'primary',
-            rounded: 'rounded-full',
-            text: 'primary',
-          }
+          name: 'Danh mục shop',
+          
         }
       ]
     },

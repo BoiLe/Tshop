@@ -18,6 +18,7 @@ import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { DasboardComponent } from './component/dasboard/dasboard.component';
+import { MessageRoutingModule } from './message-routing.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { DasboardComponent } from './component/dasboard/dasboard.component';
   imports: [
     RouterModule,
     CommonModule,
+    MessageRoutingModule,
     TDSHeaderModule,
     TDSFormFieldModule,
     TDSSelectModule,

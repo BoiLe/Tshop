@@ -109,29 +109,30 @@
                       </td>
                       
                       <td  [ngSwitch]="data.StatusRefund">
-                          <div *ngSwitchCase="'Đã hoàn tiền'" class="flex gap-2 items-center text-body-2 font-regular text-neutral-1-900">
-                           <i class="tdsi-tag-2-fill text-success-400"></i>
-                           {{ data.StatusRefund }}
-                          </div>
-                          <div *ngSwitchCase="'Từ chối'" class="flex gap-2 items-center text-body-2 font-regular text-neutral-1-900">
-                           <i class="tdsi-tag-2-fill text-error-400"></i>
-                           {{ data.StatusRefund }}
-                          </div>
-                          <div *ngSwitchCase="'Đang xử lý'" class="flex gap-2 items-center text-body-2 font-regular text-neutral-1-900">
-                           <i class="tdsi-tag-2-fill text-warning-400"></i>
+                      
+                          <div  *ngSwitchCase="'Đang xử lý'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
+                           <tds-badge status="warning" class=" mr-1"></tds-badge>
                            {{ data.StatusRefund }}
                           </div>
                           <div  *ngSwitchCase="'Chưa xử lý'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
                            <tds-badge status="bg-neutral-1-300" class=" mr-1"></tds-badge>
                            {{ data.StatusRefund }}
                           </div>
+                          <div  *ngSwitchCase="'Đã hoàn tiền'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
+                           <tds-badge status="success" class=" mr-1"></tds-badge>
+                           {{ data.StatusRefund }}
+                          </div>
+                          <div  *ngSwitchCase="'Từ chối'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
+                           <tds-badge status="error" class=" mr-1"></tds-badge>
+                           {{ data.StatusRefund }}
+                          </div>
                           
                           
                          
                         </td>
-                      <td><div class="text-body-2 font-regular text-neutral-1-900">{{ data.Stranfort }}</div></td>
+                      <td><div class="text-body-2 font-regular text-neutral-1-900" *ngIf="data.StatusRefund === 'Đang xử lý'">{{ data.Stranfort }}</div></td>
                       <td >
-                          <div *ngIf="data.StatusOrder === 'Đã giao hàng'" class="flex items-center gap-2 text-body-2 text-info-400 font-regular">
+                          <div *ngIf="data.StatusRefund === 'Chưa xử lý'" class="flex items-center gap-2 text-body-2 text-info-400 font-regular">
                               <i class="tdsi-reply-fill"></i>
                               Phản hồi
                           </div>

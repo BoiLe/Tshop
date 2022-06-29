@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './component/login/login-form/login-form.component';
 import { RegisterFormComponent } from './component/register-store/register-form/register-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountRoutingModule } from './account-routing.module';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
   ],
-  imports: [CommonModule, 
+  imports: [
+    CommonModule, 
     RouterModule,
+    AccountRoutingModule,
     TDSAvatarModule,
     TDSHeaderModule,
     TDSDropDownModule,

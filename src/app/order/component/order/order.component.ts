@@ -124,7 +124,7 @@ export class OrderComponent implements OnInit {
           Phone:"012312321",
           Total: '1.500.000',
           StatusOrder: 'Đã hủy',
-          StatusCount: 'Đã thanh toán',
+          StatusCount: 'Chưa thanh toán',
           Trading:"Giao hàng tiết kiệm",
           Date:"30/08/2021",
          
@@ -171,6 +171,84 @@ export class OrderComponent implements OnInit {
       },
       {
           id: 11,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 12,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 13,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 14,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 15,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 16,
+          IdOrder: 'DH 023165',
+          Customer: "Sun Happy",
+          Phone:"012312321",
+          Total: '1.500.000',
+          StatusOrder: 'Chờ lấy hàng',
+          StatusCount: 'Chưa thanh toán',
+          Trading:"Giao hàng tiết kiệm",
+          Date:"30/08/2021",
+         
+
+      },
+      {
+          id: 17,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone:"012312321",

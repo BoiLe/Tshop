@@ -34,10 +34,10 @@ export class OrderRefundListComponent implements OnInit {
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"07/09/2021",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đã hoàn tiền",
+          StatusOrder:"Đã hủy", 
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Từ chối",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
         
       },
@@ -48,11 +48,11 @@ export class OrderRefundListComponent implements OnInit {
           Phone: "12321323",
           total:"120.000",
           StatusOrder:"Đã giao hàng",
-          RDate:"07/09/2021",
-          Pdate:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
           StatusRefund:"Chưa xử lý",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
           id: 3,
@@ -60,12 +60,12 @@ export class OrderRefundListComponent implements OnInit {
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Từ chối",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Chưa xử lý",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
           id: 4,
@@ -73,163 +73,131 @@ export class OrderRefundListComponent implements OnInit {
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
           StatusRefund:"Đang xử lý",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 5,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
           StatusRefund:"Đang xử lý",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 6,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 7,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 8,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 9,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 10,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 11,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 12,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
       {
-          id: 4,
+          id: 13,
           IdOrder: 'DH 023165',
           Customer: "Sun Happy",
           Phone: "12321323",
           total:"120.000",
-          StatusOrder:"30/08/2021",
-          RDate:"Đã giao hàng",
-          Pdate:"Đã giao hàng",
-          StatusRefund:"Đang xử lý",
+          StatusOrder:"Đã giao hàng",
+          RDate:"30/08/2021",
+          Pdate:"07/09/2021",
+          StatusRefund:"Đã hoàn tiền",
           Stranfort:"Kiện hàng đã giao cho bưu cục",
-
+        
       },
-
-  ];
-  tabsIcon2 = [
-    {
-      name: 'Tất cả',
-      count: 99,
-      content: "Content of Tab Pane 1"
-    },
-    {
-      name: 'Chờ xác nhận',
-      count: 85,
-      content: "Content of Tab Pane 2"
-    },
-    {
-      name: 'Chờ lấy hàng',
-      count: 80,
-      content: "Content of Tab Pane 3"
-    },
-    {
-      name: 'Đang giao',
-      count: 99,
-      content: "Content of Tab Pane 1"
-    },
-    {
-      name: 'Đã giao',
-      count: 85,
-      content: "Content of Tab Pane 2"
-    },
-    {
-      name: 'Đã hủy',
-      count: 80,
-      content: "Content of Tab Pane 3"
-    }
+      
   ];
   constructor() { }
 

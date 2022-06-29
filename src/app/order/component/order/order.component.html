@@ -76,7 +76,7 @@
                           <td><a tds-link class="text-primary-1 text-body-2 font-regular "  [routerLink]="['/admin/order/order-detail']">{{ data.IdOrder }}</a></td>
                           <td><div class="flex flex-col">
                             <div class="text-body-2 font-regular text-neutral-1-900">
-                              {{ data.Customer }}
+                              {{ data.Customer }} 
                             </div>
                             <div class="flex items-center gap-1 text-neutral-1-400 text-body-2 font-regular"><i class="tdsi-call-fill text-neutral-1-500"></i> {{ data.Phone }} </div>
                           </div></td>
@@ -97,7 +97,7 @@
                              <tds-badge  color="#87d068" class=" mr-1"></tds-badge>
                              {{ data.StatusCount }}
                             </div>
-                            <div  *ngSwitchCase="'Chưa thanh toán'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
+                            <div   *ngSwitchCase="'Chưa thanh toán'" class="flex gap-1 items-center text-body-2 font-regular text-neutral-1-900">
                              <tds-badge color="#f50" class=" mr-1"></tds-badge>
                              {{ data.StatusCount }}
                             </div>
