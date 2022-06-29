@@ -19,12 +19,15 @@ import { ModalBlockComponent } from './message/component/modal-block/modal-block
 import { ModalUnblockComponent } from './message/component/modal-unblock/modal-unblock.component';
 import { RemoveMessageComponent } from './message/component/remove-message/remove-message.component';
 import { ModalCusComponent } from './message/component/modal-cus/modal-cus.component';
-import { OrderListComponent } from './message/component/order-list/order-list.component';
-import { OrderComponent } from './message/component/order-list/order/order.component';
-import { OrderDetailComponent } from './message/component/order-list/order-detail/order-detail.component';
-import { OrderRefundComponent } from './message/component/order-list/order-refund/order-refund.component';
-import { OrderRefundDetailComponent } from './message/component/order-list/order-refund/order-refund-detail/order-refund-detail.component';
-import { OrderRefundListComponent } from './message/component/order-list/order-refund/order-refund-list/order-refund-list.component';
+
+
+import { OrderListComponent } from './order/order-list/order-list.component';
+import { OrderComponent } from './order/component/order/order.component';
+import { OrderDetailComponent } from './order/component/order-detail/order-detail.component';
+import { OrderRefundComponent } from './order/component/order-refund/order-refund.component';
+import { DasboardComponent } from './message/component/dasboard/dasboard.component';
+import { OrderRefundListComponent } from './order/component/order-refund/order-refund-list/order-refund-list.component';
+import { OrderRefundDetailComponent } from './order/component/order-refund/order-refund-detail/order-refund-detail.component';
 
 
 const routes: Routes = [
@@ -72,12 +75,11 @@ const routes: Routes = [
     path: 'admin',
     component: LayoutAdminComponent,
     children: [
-      { path: '', redirectTo: '/admin/chat', pathMatch: 'full' },
+      { path: '',  component: DasboardComponent,},
       { path: 'chat', component: ChatComponent,  },
       { path: 'setting', component: SettingMessageComponent },
       { path: 'order', component: OrderListComponent,   
       children: [   
-      
         { path: '', component: OrderComponent },
         { path: 'order-detail', component: OrderDetailComponent },
         { path: 'order-refund', component: OrderRefundComponent,
@@ -87,7 +89,8 @@ const routes: Routes = [
                 
         ] 
       },
-      ] },
+      ] 
+    },
     ],
   },
   { path: 'modal', component: ModalBlockComponent },

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TDSModalService } from 'tds-ui/modal';
-import { TDSTabsCanDeactivateFn } from 'tds-ui/tabs';
-import { Observable } from 'rxjs';
-import { TDSSafeAny } from 'tds-ui/shared/utility';
+import { TDSSafeAny } from 'tmt-tang-ui';
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -10,6 +8,7 @@ import { TDSSafeAny } from 'tds-ui/shared/utility';
   host: { class: 'h-full w-full flex flex-col bg-white' },
 })
 export class OrderComponent implements OnInit {
+
   expandSet = new Set<number>();
   productData = [
     {
@@ -231,4 +230,5 @@ export class OrderComponent implements OnInit {
         this.expandSet.delete(id);
     }
 }
+
 }

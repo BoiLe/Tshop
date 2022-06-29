@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.scss'],
   host: { class: 'h-full flex flex-col overflow-hidden ' },
+
 })
 export class OrderListComponent implements OnInit {
- 
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
 }

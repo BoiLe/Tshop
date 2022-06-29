@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   host: { class: 'h-full w-full flex flex-col bg-white' },
 })
 export class OrderDetailComponent implements OnInit {
+
   orderData = [
     {
       id:1,
@@ -66,5 +67,4 @@ export class OrderDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

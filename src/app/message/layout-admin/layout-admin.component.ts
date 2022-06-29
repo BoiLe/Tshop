@@ -46,7 +46,7 @@ export class LayoutAdminComponent implements OnInit {
   constructor() { }
   public DataTag: Array<TDSMenuDTO> = [
     {
-      name: "Home",
+      name: "Trang chủ",
       icon: "tdsi-home-fill",
       link: '/home',
     },
@@ -57,7 +57,7 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-message-fill",
       listChild: [
         {
-          link: '/admin',
+          link: '/admin/chat',
           name: 'Danh sách tin nhắn'
         },
         {

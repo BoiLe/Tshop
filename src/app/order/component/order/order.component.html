@@ -16,9 +16,9 @@
       </button>
   </div>
 </div> 
-<div class="flex items-start  justify-center h-full w-full bg-neutral-3-100 p-4 overflow-auto  tds-custom-scroll">
+<div class="flex    h-full w-full bg-neutral-3-50 p-4 overflow-hidden  ">
   <!-- list order -->
-      <div class="bg-white border  border-neutral-2-200 pb-2.5  rounded-md   flex flex-col" >
+    <div class="bg-white border  border-neutral-2-200 pb-2.5  rounded-md  overflow-hidden  flex flex-col" >
             <div class="flex justify-between items-center px-4">
               <tds-filter-status [ngModel]='1' (selectChange)="onSelectChange($event)">
   
@@ -53,18 +53,19 @@
                     
                   </tds-form-field>
             </div>
-            <tds-table #table [listData]="listOfData" tableLayout="fixed" [pageSize]="7" >
+           <div class="w-full h-full">
+            <tds-table #table [listData]="listOfData"  [scroll]="{y:'auto'}" [pageSize]="13" >
               <thead >
                   <tr>
                       <th width="60px"></th>
-                      <th>Mã đơn hàng</th>
-                      <th>Khách hàng</th>
-                      <th>Tổng tiền</th>
-                      <th>Trạng thái đơn hàng</th>
-                      <th>Trạng thái thanh toán</th>
-                      <th>Nhà vận chuyển</th>
-                      <th>Ngày đặt hàng</th>
-                      <th>Thao tác</th>
+                      <th width="180px">Mã đơn hàng</th>
+                      <th width="180px">Khách hàng</th>
+                      <th width="180px">Tổng tiền</th>
+                      <th width="180px">Trạng thái đơn hàng</th>
+                      <th width="180px">Trạng thái thanh toán</th>
+                      <th width="180px">Nhà vận chuyển</th>
+                      <th width="180px">Ngày đặt hàng</th>
+                      <th width="180px">Thao tác</th>
                      
                   </tr>
               </thead>
@@ -80,7 +81,7 @@
                             <div class="flex items-center gap-1 text-neutral-1-400 text-body-2 font-regular"><i class="tdsi-call-fill text-neutral-1-500"></i> {{ data.Phone }} </div>
                           </div></td>
                           <td><div class="flex gap-1 items-center">
-                            <u  class="text-neutral-1-400 font-regular">đ</u>
+                            <u  class="text-neutral-1-400 font-regular text-body-2">đ</u>
                             <div class="text-body-2 font-regular text-neutral-1-900">{{ data.Total }}</div>
                           </div></td>
                           <td  [ngSwitch]="data.StatusOrder">
@@ -182,6 +183,6 @@
                   
               </tbody>
           </tds-table>
-          
-      </div>
+           </div>
+    </div>
 </div>  

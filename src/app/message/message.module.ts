@@ -11,18 +11,17 @@ import { RemoveMessageComponent } from './component/remove-message/remove-messag
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFilterStatusModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSStepsModule, TDSSwitchModule, TDSTableModule, TDSTabsModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
+
+
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { OrderListComponent } from './component/order-list/order-list.component';
-import { OrderComponent } from './component/order-list/order/order.component';
-import { OrderDetailComponent } from './component/order-list/order-detail/order-detail.component';
-import { OrderRefundComponent } from './component/order-list/order-refund/order-refund.component';
-import { OrderRefundDetailComponent } from './component/order-list/order-refund/order-refund-detail/order-refund-detail.component';
-import { OrderRefundListComponent } from './component/order-list/order-refund/order-refund-list/order-refund-list.component';
+import { DasboardComponent } from './component/dasboard/dasboard.component';
 
 
 @NgModule({
-  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent, OrderListComponent, OrderComponent, OrderDetailComponent, OrderRefundComponent, OrderRefundDetailComponent, OrderRefundListComponent, ],
+  declarations: [ChatComponent, LayoutAdminComponent, SettingMessageComponent, AddShortcutComponent, ModalBlockComponent, ModalUnblockComponent, RemoveMessageComponent, ModalCusComponent,DasboardComponent, ],
   imports: [
     RouterModule,
     CommonModule,
