@@ -2,9 +2,9 @@
   <div class="flex justify-between items-center bg-white shadow-lg px-10 py-2">
     <img src="../../../../assets/Group 11139.png" alt="" />
     <tds-button-group class="gap-4">
-      <button tds-flat-button [routerLink]="['/taikhoan/dang-nhap']"
+      <button tds-flat-button [routerLink]="['/account']"
         class="p-1.5 font-medium text-sm text-neutral-1-900">Trang chủ Tshop</button>
-      <button tds-flat-button class="p-1.5 font-medium text-sm text-neutral-1-900 border-transparent">Đăng kí</button>
+      <button [routerLink]="['/account/register']" tds-flat-button class="p-1.5 font-medium text-sm text-neutral-1-900 border-transparent">Đăng kí</button>
       <div class="flex">
         <button 
           class="px-3 py-1.5 text-sm bg-primary-1 rounded-md font-medium text-white">VN</button>
