@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { OrderModule } from './order/order.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReviewStoreModule } from './review-store/review-store.module';
 ;
 
 
@@ -17,6 +18,7 @@ import { NgModule } from '@angular/core';
     AccountModule,
     MessageModule,
     OrderModule,
+    ReviewStoreModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,

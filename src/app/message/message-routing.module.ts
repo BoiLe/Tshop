@@ -6,6 +6,10 @@ import { OrderRefundListComponent } from '../order/component/order-refund/order-
 import { OrderRefundComponent } from '../order/component/order-refund/order-refund.component';
 import { OrderComponent } from '../order/component/order/order.component';
 import { OrderListComponent } from '../order/order-list/order-list.component';
+import { ReviewProductComponent } from '../review-store/component/review-product/review-product.component';
+import { ReviewStoreComponent } from '../review-store/component/review-store/review-store.component';
+import { ReviewTransportersComponent } from '../review-store/component/review-transporters/review-transporters.component';
+import { ReviewComponent } from '../review-store/review/review.component';
 import { ChatComponent } from './component/chat/chat.component';
 import { DasboardComponent } from './component/dasboard/dasboard.component';
 import { ModalBlockComponent } from './component/modal-block/modal-block.component';
@@ -24,13 +28,9 @@ const routes: Routes = [
       { path: '',  component: DasboardComponent,},
       { path: 'chat', component: ChatComponent,  },
       { path: 'setting-message', component: SettingMessageComponent },
-     
-      
-     
       { path: 'order', 
       component: OrderListComponent,   
       children: [
-       
         { path: 'order-list', component: OrderComponent },
         { path: 'order-detail', component: OrderDetailComponent },
         { path: 'order-refund', component: OrderRefundComponent, 
@@ -38,10 +38,19 @@ const routes: Routes = [
           { path: '', component: OrderRefundListComponent },                
           { path: 'order-refund-detail', component: OrderRefundDetailComponent },                
           // { path: '', redirectTo: '/admin/order/order-list', pathMatch: 'full' },   
-        ] 
+                ] 
+        },
+                ] 
       },
-      ] 
+      { path: 'review', component: ReviewComponent, children:
+    [
+      
+      { path: 'reviewStore', component: ReviewStoreComponent },
+      { path: 'reviewProduct', component: ReviewProductComponent },
+      { path: 'reviewTransporters', component: ReviewTransportersComponent },
+    ]
     },
+      
     ],
   },
   { path: 'modal', component: ModalBlockComponent },

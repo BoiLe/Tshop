@@ -106,15 +106,15 @@ export class LayoutAdminComponent implements OnInit {
       icon: "tdsi-star-2-fill",
       listChild: [
         {
-          link: '/menu',
+          link: '/admin/review/reviewStore',
           name: 'Đánh giá shop'
         },
         {
-          link: '/pagination',
+          link: '/admin/review/reviewProduct',
           name: 'Đánh giá sản phẩm'
         },
         {
-          link: '/step',
+          link: '/admin/review/reviewTransporters',
           name: 'Đánh giá vận chuyển',
          
         }
