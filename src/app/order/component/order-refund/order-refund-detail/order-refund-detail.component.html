@@ -16,7 +16,7 @@
           <i class="tdsi-checkbox-check-fill text-lg leading-none mr-2"></i>Đồng ý
         </span>
       </button>
-        <button tds-button (click)="showModal()" >Khiếu nại tới Tshop</button>
+        <button tds-button (click)="showModal()" class="!text-neutral-1-900 !bg-white !border-neutral-2-200">Khiếu nại tới Tshop</button>
         <tds-modal
             [(visible)]="isVisible"
             [title]="modalTitle"
@@ -71,8 +71,8 @@
                 </div>
             </ng-template>
         </tds-modal>
-        <button tds-button >Đề xuất khác</button>
-        <button tds-button >Hủy</button>
+        <button tds-button class="!text-neutral-1-900 !bg-white !border-neutral-2-200">Đề xuất khác</button>
+        <button tds-button class="!text-neutral-1-900 !bg-white !border-neutral-2-200">Hủy</button>
        </div>
     </div>
 </div>
@@ -108,7 +108,7 @@
                             <textarea tdsInput placeholder="Để lại lời nhắn cho khách hàng"></textarea>
                         </tds-form-field>
                         <div class="flex justify-end gap-2.5">
-                            <button tds-button >Hủy</button>
+                            <button tds-button class="!text-neutral-1-900 !bg-white !border-neutral-2-200">Hủy</button>
                             <button tds-button color="primary">Hoàn thành</button>
                         </div>
                     </div>

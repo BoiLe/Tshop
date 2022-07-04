@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TDSContextMenuService, TDSDropdownMenuComponent, TDSPlacementType, TDSSafeAny } from 'tmt-tang-ui';
+import { TDSContextMenuService } from 'tds-ui/dropdown';
+import { TDSSafeAny } from 'tds-ui/shared/utility';
+
 interface FilterStatusItemDTO {
   name: string;
   value: TDSSafeAny,

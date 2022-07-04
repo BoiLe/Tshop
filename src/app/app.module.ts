@@ -9,6 +9,8 @@ import { OrderModule } from './order/order.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReviewStoreModule } from './review-store/review-store.module';
+import { ProductModule } from './product/product.module';
+import { HttpClientModule } from '@angular/common/http';
 ;
 
 
@@ -18,12 +20,15 @@ import { ReviewStoreModule } from './review-store/review-store.module';
     AccountModule,
     MessageModule,
     OrderModule,
+    ProductModule,
     ReviewStoreModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     DragDropModule,
-    ScrollingModule,],
+    ScrollingModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

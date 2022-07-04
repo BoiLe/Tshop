@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TDSMenuDTO, TDSMenuOptionDTO } from "tmt-tang-ui";
-import { TDSSafeAny } from 'tmt-tang-ui';
+import { TDSMenuDTO, TDSMenuOptionDTO } from 'tds-ui/menu';
+import { TDSSafeAny } from 'tds-ui/shared/utility';
+
 
 @Component({
   selector: 'app-layout-admin',
@@ -48,7 +49,7 @@ export class LayoutAdminComponent implements OnInit {
     {
       name: "Trang chủ",
       icon: "tdsi-home-fill",
-      link: '/home',
+      link: '/admin',
     },
 
     {
@@ -90,11 +91,11 @@ export class LayoutAdminComponent implements OnInit {
       listChild: [
         
         {
-          link: '/pagination',
-          name: 'Đánh giá sản phẩm'
+          link: '/admin/product/productList',
+          name: 'Danh sách sản phẩm'
         },
         {
-          link: '/step',
+          link: '/admin/product/productAdd',
           name: 'Thêm sản phẩm',
           
         }

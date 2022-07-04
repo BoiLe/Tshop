@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { TDSContextMenuService, TDSDropdownMenuComponent, TDSPlacementType }
-  from 'tmt-tang-ui';
+
 import { Observable } from 'rxjs';
-import { TDSModalService } from 'tmt-tang-ui';
+import { TDSContextMenuService, TDSDropdownMenuComponent, TDSPlacementType } from 'tds-ui/dropdown';
+import { TDSModalService } from 'tds-ui/modal';
+
 
 @Component({
   selector: 'app-chat',

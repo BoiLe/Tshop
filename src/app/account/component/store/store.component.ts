@@ -1,30 +1,126 @@
 import { Component, OnInit } from '@angular/core';
-
+import { StoreService } from 'src/app/services/store.service';
+export interface storeDTO {
+  
+    id: String
+    code: String
+    name: String
+    avatarUrl: String
+    coverImageUrl: String
+    address: String
+    provinceCode: String
+    districtCode: String
+    wardCode: String
+    fullAddress: String
+    phone: String
+    email: String
+    shopManager: String
+    ownerId: String
+    isActive: true
+    flag: 0
+    ratingForService: 0
+    ratingForProduct: 0
+    likeCount: 0
+    followCount: 0
+    companyId: String
+    facebookUrl: String
+    shopeeUrl: String
+    shopDescription: String
+  
+}
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.scss'],
 })
 export class StoreComponent implements OnInit {
-  public store = [
+  public stores = [
     {
-      id: 1,
-      name: 'Shop giày thật giá thật',
-      phone: '0922000234',
+      "id": "815595257275572",
+      "code": "shop05",
+      "name": "Baby shop",
+      "avatarUrl": "https://tshop.tpos.dev/Upload/637546783369506683.png",
+      "coverImageUrl": null,
+      "address": "19 Bà hom",
+      "provinceCode": "79",
+      "districtCode": "775",
+      "wardCode": "27349",
+      "fullAddress": null,
+      "phone": "0917854231",
+      "email": "string",
+      "shopManager": "Baby shark",
+      "ownerId": "string",
+      "isActive": true,
+      "flag": 0,
+      "ratingForService": 0,
+      "ratingForProduct": 0,
+      "likeCount": 2,
+      "followCount": 0,
+      "companyId": "string",
+      "facebookUrl": null,
+      "shopeeUrl": "https://shopee.vn/babyhopstore",
+      "shopDescription": null
     },
     {
-      id: 2,
-      name: 'Shop giày thật giá thật',
-      phone: '0922000234',
+      "id": "8155298472159123",
+      "code": "shop01",
+      "name": "Bách hóa shop",
+      "avatarUrl": "https://tshop.tpos.dev/Upload/637608455812370036.jpg",
+      "coverImageUrl": null,
+      "address": "15 Bà hom",
+      "provinceCode": "79",
+      "districtCode": "775",
+      "wardCode": "27349",
+      "fullAddress": null,
+      "phone": "0937974922",
+      "email": "string",
+      "shopManager": "Vy Vy",
+      "ownerId": "6687648839280521",
+      "isActive": true,
+      "flag": 0,
+      "ratingForService": 0,
+      "ratingForProduct": 0,
+      "likeCount": 0,
+      "followCount": 0,
+      "companyId": "string",
+      "facebookUrl": "string",
+      "shopeeUrl": "string",
+      "shopDescription": null
     },
     {
-      id: 3,
-      name: 'Shop giày thật giá thật',
-      phone: '0922000234',
+      "id": "8156593929457899",
+      "code": "shop06",
+      "name": "Cam Nguyen",
+      "avatarUrl": null,
+      "coverImageUrl": null,
+      "address": "12 CN1 Tan Phu, HCM",
+      "provinceCode": "string",
+      "districtCode": "string",
+      "wardCode": "string",
+      "fullAddress": null,
+      "phone": "0354309399",
+      "email": "string",
+      "shopManager": "Cam Nguyen",
+      "ownerId": "string",
+      "isActive": false,
+      "flag": 0,
+      "ratingForService": 0,
+      "ratingForProduct": 0,
+      "likeCount": 0,
+      "followCount": 0,
+      "companyId": "string",
+      "facebookUrl": "string",
+      "shopeeUrl": "https://shopee.vn/vntrade",
+      "shopDescription": null
     },
   ];
 
-  constructor() {}
+  constructor(
+      private store: StoreService,
+  ) {}
 
   ngOnInit(): void {}
+  getListStore():any {
+
+  }
 }

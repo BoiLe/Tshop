@@ -1,5 +1,5 @@
 <!-- layout -->
-<div class="flex w-screen h-screen"  (window:resize)="onResize($event)">
+<div class="flex w-screen h-screen overflow-hidden"  (window:resize)="onResize($event)">
   <!-- sidebar -->
   <div [style.min-width.px]="!isCollapsed ? 260 : 64">
     <tds-menu [options]="style1" [data]="lstMenu2" [inlineCollapsed]="isCollapsed" [showLogo]="true"

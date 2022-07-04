@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { TDSSafeAny } from 'tmt-tang-ui';
+import { TDSSafeAny } from 'tds-ui/shared/utility';
+
 
 @Component({
   selector: 'app-register-form',

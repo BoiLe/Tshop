@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { en_US, TDSI18nService, vi_VN } from 'tmt-tang-ui';
+import { en_US, TDSI18nService, vi_VN } from 'tds-ui/i18n';
+
 @Component({
   selector: 'app-setting-message',
   templateUrl: './setting-message.component.html',

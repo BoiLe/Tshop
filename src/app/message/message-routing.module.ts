@@ -6,6 +6,8 @@ import { OrderRefundListComponent } from '../order/component/order-refund/order-
 import { OrderRefundComponent } from '../order/component/order-refund/order-refund.component';
 import { OrderComponent } from '../order/component/order/order.component';
 import { OrderListComponent } from '../order/order-list/order-list.component';
+import { AddProductComponent } from '../product/component/add-product/add-product.component';
+import { ProductListComponent } from '../product/component/product-list/product-list.component';
 import { ReviewProductComponent } from '../review-store/component/review-product/review-product.component';
 import { ReviewStoreComponent } from '../review-store/component/review-store/review-store.component';
 import { ReviewTransportersComponent } from '../review-store/component/review-transporters/review-transporters.component';
@@ -23,35 +25,46 @@ const routes: Routes = [
   { path: '', redirectTo: '/message', pathMatch: 'full' },
   {
     path: 'admin',
-    component: LayoutAdminComponent,
-    children: [
-      { path: '',  component: DasboardComponent,},
-      { path: 'chat', component: ChatComponent,  },
-      { path: 'setting-message', component: SettingMessageComponent },
-      { path: 'order', 
-      component: OrderListComponent,   
-      children: [
-        { path: 'order-list', component: OrderComponent },
-        { path: 'order-detail', component: OrderDetailComponent },
-        { path: 'order-refund', component: OrderRefundComponent, 
-      children: [
-          { path: '', component: OrderRefundListComponent },                
-          { path: 'order-refund-detail', component: OrderRefundDetailComponent },                
-          // { path: '', redirectTo: '/admin/order/order-list', pathMatch: 'full' },   
+      component: LayoutAdminComponent,
+      children: 
+      [
+        { path: '',  component: DasboardComponent,},
+        { path: 'chat', component: ChatComponent,  },
+        { path: 'setting-message', component: SettingMessageComponent },
+        { path: 'order', 
+            component: OrderListComponent,   
+            children: 
+            [
+                { path: 'order-list', component: OrderComponent },
+                { path: 'order-detail', component: OrderDetailComponent },
+                { path: 'order-refund', component: OrderRefundComponent, 
+                children: 
+                [
+                    { path: '', component: OrderRefundListComponent },                
+                    { path: 'order-refund-detail', component: OrderRefundDetailComponent },                
+                    // { path: '', redirectTo: '/admin/order/order-list', pathMatch: 'full' },   
                 ] 
+              },
+            ] 
         },
-                ] 
-      },
-      { path: 'review', component: ReviewComponent, children:
-    [
+        { path: 'review', component: ReviewComponent, children:
+            [
+              
+              { path: 'reviewStore', component: ReviewStoreComponent },
+              { path: 'reviewProduct', component: ReviewProductComponent },
+              { path: 'reviewTransporters', component: ReviewTransportersComponent },
+            ]
+        },
+        { path: 'product', component: ReviewComponent, children:
+            [
+              
+              { path: 'productList', component: ProductListComponent },
+              { path: 'productAdd', component: AddProductComponent },
+             
+            ]
+        },
       
-      { path: 'reviewStore', component: ReviewStoreComponent },
-      { path: 'reviewProduct', component: ReviewProductComponent },
-      { path: 'reviewTransporters', component: ReviewTransportersComponent },
-    ]
-    },
-      
-    ],
+      ],
   },
   { path: 'modal', component: ModalBlockComponent },
   { path: 'unmodal', component: ModalUnblockComponent },

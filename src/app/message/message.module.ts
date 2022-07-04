@@ -10,7 +10,7 @@ import { ModalUnblockComponent } from './component/modal-unblock/modal-unblock.c
 import { RemoveMessageComponent } from './component/remove-message/remove-message.component';
 import { ModalCusComponent } from './component/modal-cus/modal-cus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TDSBadgeModule, TDSBreadCrumbModule, TDSButtonModule, TDSCheckBoxModule, TDSCollapseModule, TDSDropDownModule, TDSFilterStatusModule, TDSFormFieldModule, TDSHeaderModule, TDSInputModule, TDSMenuModule, TDSModalModule, TDSSelectModule, TDSStepsModule, TDSSwitchModule, TDSTableModule, TDSTabsModule, TDSTagModule, TDSTimePickerModule } from 'tmt-tang-ui';
+
 
 
 
@@ -19,6 +19,27 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { DasboardComponent } from './component/dasboard/dasboard.component';
 import { MessageRoutingModule } from './message-routing.module';
+import { TDSPageHeaderModule } from 'tds-ui/page-header';
+import { TDSBadgeModule } from 'tds-ui/badges';
+import { TDSBreadCrumbModule } from 'tds-ui/breadcrumb';
+import { TDSButtonModule } from 'tds-ui/button';
+import { TDSCollapseModule } from 'tds-ui/collapse';
+import { TDSDropDownModule } from 'tds-ui/dropdown';
+import { TDSFilterStatusModule } from 'tds-ui/filter-status';
+import { TDSFormFieldModule } from 'tds-ui/form-field';
+import { TDSMenuModule } from 'tds-ui/menu';
+import { TDSModalModule } from 'tds-ui/modal';
+import { TDSSelectModule } from 'tds-ui/select';
+import { TDSStepsModule } from 'tds-ui/step';
+import { TDSSwitchModule } from 'tds-ui/switch';
+import { TDSTableModule } from 'tds-ui/table';
+import { TDSTabsModule } from 'tds-ui/tabs';
+import { TDSTagModule } from 'tds-ui/tag';
+import { TDSCheckBoxModule } from 'tds-ui/tds-checkbox';
+import { TDSInputModule } from 'tds-ui/tds-input';
+import { TDSTimePickerModule } from 'tds-ui/time-picker';
+import { TDSHeaderModule } from 'tds-ui/header';
+import { TDSAvatarModule } from 'tds-ui/avatar';
 
 
 @NgModule({
@@ -27,7 +48,7 @@ import { MessageRoutingModule } from './message-routing.module';
     RouterModule,
     CommonModule,
     MessageRoutingModule,
-    TDSHeaderModule,
+    TDSPageHeaderModule,
     TDSFormFieldModule,
     TDSSelectModule,
     TDSButtonModule,
@@ -50,7 +71,9 @@ import { MessageRoutingModule } from './message-routing.module';
     TDSTableModule, 
     TDSTabsModule,
     TDSFilterStatusModule,
-    TDSStepsModule
+    TDSStepsModule,
+    TDSHeaderModule,
+    TDSAvatarModule
     
     
 
