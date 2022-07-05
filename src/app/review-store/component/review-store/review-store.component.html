@@ -70,7 +70,7 @@
                     </tds-form-field>     
               </div>
               <div class="w-full h-full">
-                <tds-table showSizeChanger #sortTable [listData]="listOfData"  [scroll]="{y:'auto'}" [pageSize]="13" >
+                <tds-table showSizeChanger #sortTable [listData]="reviews"  [scroll]="{y:'auto'}" [pageSize]="13" >
                   <thead >
                       <tr>
                           
@@ -90,41 +90,38 @@
                               
                               <td><div class="flex flex-col ">
                                 <div class="text-body-2 font-regular text-neutral-1-900 ">
-                                  {{ data.Customer }} 
+                                  {{ data.customerName }} 
                                 </div>
-                                <div class="flex items-center gap-1 text-neutral-1-400 text-body-2 font-regular"><i class="tdsi-call-fill text-neutral-1-500"></i> {{ data.Phone }} </div>
+                                <div class="flex items-center gap-1 text-neutral-1-400 text-body-2 font-regular"><i class="tdsi-call-fill text-neutral-1-500"></i> {{ data.customerPhoneNumber }} </div>
                               </div></td>
                              
                               <td >
-                                <tds-rate size="sm" [(ngModel)]="data.review" (ngModelChange)="onChange($event)" 
-                                    (tdsOnBlur)="onBlur($event)" 
-                                    (tdsOnHoverChange)="onItemHover($event)"
-                                    (tdsOnFocus)="onFocus($event)"
-                                    (tdsOnKeyDown)="onKeyDown($event)">
+                                <tds-rate size="sm" [(ngModel)]="data.rating" disabled
+                                   >
                                 </tds-rate>
                                
                               </td>
                               <td  >
                                 <div class="text-body-2 font-regular text-neutral-1-900 gap-1">
-                                    {{ data.content }}
+                                    {{ data.reviewMessage }}
                                    
                                   </div>
                               </td>                 
-                              <td><div class="text-body-2 font-regular text-neutral-1-900">{{ data.Date }}</div></td>
-                              <td  [ngSwitch]="data.Status">
-                                <tds-tag *ngSwitchCase="'Đã trả lời'" status='success' type="outline" class="text-body-2 font-regular text-neutral-1-900">{{ data.Status }}</tds-tag> 
-                                <tds-tag *ngSwitchCase="'Đã ẩn'" status='secondary' type="outline" class="text-body-2 font-regular text-neutral-1-900">{{ data.Status }}</tds-tag>
-                                <tds-tag *ngSwitchCase="'Chưa trả lời'" status='info' type="outline" class="text-body-2 font-regular text-neutral-1-900">{{ data.Status }}</tds-tag>
+                              <td><div class="text-body-2 font-regular text-neutral-1-900">{{ data.creationTime | date:'MM/dd/yyyy'  }}</div></td>
+                              <td  [ngSwitch]="data.status">
+                                <tds-tag *ngSwitchCase="2" status='success' type="outline" class="text-body-2 font-regular text-neutral-1-900">Đã trả lời</tds-tag> 
+                                <tds-tag *ngSwitchCase="3" status='secondary' type="outline" class="text-body-2 font-regular text-neutral-1-900">Đã ẩn</tds-tag>
+                                <tds-tag *ngSwitchCase="1" status='info' type="outline" class="text-body-2 font-regular text-neutral-1-900">Chưa trả lời</tds-tag>
                                
                               </td>
-                              <td [ngSwitch]="data.Status">
-                                <div *ngSwitchCase="'Đã ẩn'" class="text-body-2 font-medium text-info-500 opacity-65">
+                              <td [ngSwitch]="data.status">
+                                <div *ngSwitchCase="3" class="text-body-2 font-medium text-info-500 opacity-65">
                                     Trả lời |   Đã báo cáo
                                 </div>
-                                <div *ngSwitchCase="'Chưa trả lời'" class="text-body-2 font-medium text-info-500">
+                                <div *ngSwitchCase="1" class="text-body-2 font-medium text-info-500">
                                  Trả lời |   Báo cáo
                                 </div>
-                                <div *ngSwitchCase="'Đã trả lời'" class="text-body-2 font-medium text-info-500">
+                                <div *ngSwitchCase="2" class="text-body-2 font-medium text-info-500">
                                     Trả lời |   Báo cáo
                                 </div>
                               </td>

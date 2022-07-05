@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { userDTO } from 'src/app/model/user.model';
 import { AccountService } from 'src/app/services/account.service';
-export interface userDTO {
-  phoneNumber: string,
-  password: string,
-}
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -18,7 +16,7 @@ export class LoginFormComponent implements OnInit {
   submitted = false;
  constructor(
               private fb: FormBuilder,
-              private account: AccountService,
+              private accountService: AccountService,
               private router: Router 
             ) { }
 
@@ -28,35 +26,18 @@ export class LoginFormComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
-
-  onSubmit(): void {
-    this.submitted = true;
-    console.log(this.loginForm.value);
-    if (this.loginForm.invalid) {
-      return; 
-    }
-    
-    
-   
-  }
-  loginWithPassword() {
-    const model =this.perModel()
-    this.account.login(model).subscribe(
-      (res:any)  => {
-          localStorage.setItem('accessToken', res.accessToken)
-          this.router.navigate(['/account/store'])
-          alert('Đăng nhập thành công!!');
+  onLogin(){
+    if(this.loginForm.valid){
+      this.accountService.login(this.loginForm.value).subscribe(
+        res=> {
+          if(res !=null){
+            localStorage.setItem('accessToken', res.accessToken)
+            this.router.navigate(['/account/store'])
+            alert('Đăng nhập thành công!!');
+          }
         },
-      err => alert('Đăng nhập thất bại !!')
-    )
-  }
-  perModel() {
-    if (this.loginForm.value.phoneNumber) {
-      this.loginWithPasswordData.phoneNumber = this.loginForm.value.phoneNumber
+        err => alert('Đăng nhập thất bại !!')
+      )
     }
-    if (this.loginForm.value.password) {
-      this.loginWithPasswordData.password = this.loginForm.value.password
-    }
-    return this.loginWithPasswordData;
   }
 }

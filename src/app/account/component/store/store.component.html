@@ -1,6 +1,6 @@
 <!-- header -->
-<div class="p-8 flex flex-col items-start absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-  <div class="text-heading-2 r font-semibold text-neutral-1-900 truncate">
+<div class="p-8 flex flex-col  overflow-hidden">
+  <div class="text-heading-2  font-semibold text-neutral-1-900 truncate">
     Chọn của hàng của bạn
   </div>
   <div class="text-neutral-1-700 font-medium text-title-1 mt-2 mb-8">
@@ -8,7 +8,7 @@
     muốn truy cập
   </div>
   <!-- body -->
-  <div class="rounded-xl shadow-2xl bg-white w-full">
+  <div class="rounded-xl shadow-2xl bg-white tds-custom-scroll  overflow-auto flex flex-col">
     <div let *ngFor="let store of stores; let i=index;" class="flex justify-between items-center p-4 border-b border-neutral-2-300" [routerLink]="['/nhan-tin/chat']">
       <div class="flex justify-center items-center">
         <img src="../../../../assets/Avatar.png" alt="" />
@@ -29,8 +29,6 @@
         <i class="tdsi-arrow-right-line"></i>
       </button>
     </div>
- 
-
   </div>
   <!-- footer -->
   <button tds-button color="primary" [routerLink]="['/account/register-store']"   class="mt-10  bg-primary-1 rounded-md py-2.5 px-auto flex items-center justify-center gap-x-2 w-full">

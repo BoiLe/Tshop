@@ -14,6 +14,10 @@ export class AccountService {
     const url= `${this.REST_API_SERVER}/api/v1/sign-in/password`
     return this.http.post<any>(url, payload )
   }
+  public appUser(): Observable<any> {
+    const url= `${this.REST_API_SERVER}/api/v1/app-user/init`
+    return this.http.get<any>(url )
+  } 
 
   
 }

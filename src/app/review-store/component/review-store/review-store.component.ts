@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewShopDTO } from 'src/app/model/review.model';
+import { ReviewService } from 'src/app/services/review.service';
 import { TDSSafeAny } from 'tds-ui/shared/utility';
 
 interface FilterStatusItemDTO {
@@ -16,6 +18,7 @@ interface FilterStatusItemDTO {
 })
 export class ReviewStoreComponent implements OnInit {
   expandSet = new Set<number>();
+  reviews:ReviewShopDTO[]=[];
   star = 0;
   value: number = 0;
   lstStar: Array<FilterStatusItemDTO> = [
@@ -267,9 +270,12 @@ export class ReviewStoreComponent implements OnInit {
       content: "Content of Tab Pane 3"
     }
   ];
-  constructor() { }
+  constructor(
+    private  ReviewService: ReviewService
+  ) { }
 
   ngOnInit(): void {
+    this.getListStore()
   }
   onSelectChange(value: TDSSafeAny) {
     
@@ -294,4 +300,18 @@ export class ReviewStoreComponent implements OnInit {
   onItemHover(e: any){
       console.log("onItemHover",e)
   }
+  getListStore():any {
+    if(localStorage.getItem('accessToken')){
+      this.ReviewService.getReviewShopList().subscribe(
+        res => {
+          this.reviews = [...res.items]
+        },
+        err => {
+          console.log(err)
+        }
+        )
+      }
+      
+  }
+  
 }
