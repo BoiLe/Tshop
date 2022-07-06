@@ -26,3 +26,9 @@ export interface ReviewShopDTO {
     status: number
     userId: String
 }
+export interface DataReviewDTO {
+    aggregates: any
+    items: ReviewShopDTO[]
+    totalCount:number
+  }
+  

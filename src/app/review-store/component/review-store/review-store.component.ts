@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReviewShopDTO } from 'src/app/model/review.model';
+import { DataReviewDTO, ReviewShopDTO } from 'src/app/model/review.model';
 import { ReviewService } from 'src/app/services/review.service';
 import { TDSSafeAny } from 'tds-ui/shared/utility';
 
@@ -17,9 +17,13 @@ interface FilterStatusItemDTO {
   host: { class: 'h-full flex flex-col overflow-hidden ' },
 })
 export class ReviewStoreComponent implements OnInit {
+  
   expandSet = new Set<number>();
   reviews:ReviewShopDTO[]=[];
+  loading = true;
+  total = 0;
   star = 0;
+  filetername=''
   value: number = 0;
   lstStar: Array<FilterStatusItemDTO> = [
     {
@@ -273,9 +277,14 @@ export class ReviewStoreComponent implements OnInit {
   constructor(
     private  ReviewService: ReviewService
   ) { }
+  pageSize = 20;
+  pageIndex = 1;
+  status = 0;
+  rating = 0;
+  
 
   ngOnInit(): void {
-    this.getListStore()
+   this.searchCustomerName()
   }
   onSelectChange(value: TDSSafeAny) {
     
@@ -300,18 +309,39 @@ export class ReviewStoreComponent implements OnInit {
   onItemHover(e: any){
       console.log("onItemHover",e)
   }
-  getListStore():any {
+
+  getListStore(pageIndex: number, pageSize: number, searchOfText?: string,):any {
+    this.loading=true
     if(localStorage.getItem('accessToken')){
-      this.ReviewService.getReviewShopList().subscribe(
-        res => {
-          this.reviews = [...res.items]
+      this.ReviewService.getReviewShopList(pageIndex, pageSize, searchOfText).subscribe(
+        (res: DataReviewDTO) => {
+         
+          if (res) {
+            this.reviews  = res.items;
+            this.total = res.totalCount;
+          } else {
+            this.reviews = [];
+            this.total = 0;
+          }
+          this.loading = false;
         },
         err => {
-          console.log(err)
+          this.loading = false;
+          this.reviews = [];
+          this.total = 0;
+        }) 
         }
-        )
+        
       }
       
-  }
   
+  searchCustomerName() {
+    
+    this.resetPage()
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername)
+  }
+   // reset page
+   resetPage() {
+    this.pageIndex = 1;
+  }
 }

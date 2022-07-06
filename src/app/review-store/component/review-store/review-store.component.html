@@ -64,13 +64,15 @@
                         class="w-96"
                         tdsInput
                         autocomplete="off"
+                        [(ngModel)]="filetername"
                         placeholder="Tìm kiếm"             
-                        [required]="true"/>
+                        [required]="true"
+                        (inputKeyup)="searchCustomerName()"/>
                       <span tdsPrefix><i class="tdsi-search-fill"></i></span> 
                     </tds-form-field>     
               </div>
               <div class="w-full h-full">
-                <tds-table showSizeChanger #sortTable [listData]="reviews"  [scroll]="{y:'auto'}" [pageSize]="13" >
+                <tds-table showSizeChanger #sortTable [listData]="reviews" [loading]="loading"  [(pageSize)]="pageSize" [(pageIndex)]="pageIndex"   [scroll]="{y:'auto'}" [pageSize]="13" >
                   <thead >
                       <tr>
                           
