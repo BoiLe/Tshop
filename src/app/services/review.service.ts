@@ -9,25 +9,40 @@ import { DataReviewDTO } from '../model/review.model';
 export class ReviewService {
   private REST_API_SERVER ='https://tshop-dev.tpos.dev'
   constructor(private http: HttpClient) { }
-  public getReviewShopList(pageIndex: number, pageSize: number, searchText?: string): Observable<DataReviewDTO> {
-    const url= `${this.REST_API_SERVER}/api/v1/appshop-review/list-review-shop${this.getParams(pageIndex, pageSize, searchText)}`
+  public getReviewShopList(pageIndex: number, pageSize: number, filetername?: string,ratingFilter?:number,statusFilter?: number,): Observable<DataReviewDTO> {
+    const url= `${this.REST_API_SERVER}/api/v1/appshop-review/list-review-shop${this.getParams(pageIndex, pageSize, filetername,ratingFilter,statusFilter)}`
     return this.http.get<DataReviewDTO>(url)
   } 
-  getParams(pageIndex: number, pageSize: number, searchText?: string) {
-    let skipCount = (pageIndex - 1) * pageSize
+  getParams(pageIndex: number, pageSize: number, filetername?: string,ratingFilter?:number, statusFilter?: number) {
+    let maxResultCount: number = pageSize;
+    let skipCount = (pageIndex - 1) * maxResultCount
     let result = `?SkipCount=${skipCount}&MaxResultCount=${pageSize}`
-
-    if (searchText ) {
+    let param: String[]=[]
+    if (filetername) {
+      param.push(`customerName~contains~${filetername}`)
+    }
+    if (ratingFilter) {
+      param.push(`rating~eq~${ratingFilter}`)
+    }
+    if (statusFilter) {
+      param.push(`status~eq~${statusFilter}`)
+      
+    }
+    if (param.length>0) {
       result += '&filter='
-    }
-
-    if (searchText) {
-      result += `customerName~contains~${searchText}`
+      for(let i = 0; i<param.length;i++) { 
+        if(i==0){
+          result+=param[i]
+          continue
+        }
+        result+='~and~'+param[i]
+        
+     }
      
-      return result
     }
-
-   
     return result
+  }
+  getListStatusForShop( params: { ShopId: any, Rating: any } ): Observable<any> {
+    return this.http.post<any>(`${this.REST_API_SERVER}/api/v1/appshop-review/status-list-forshop`, params)
   }
 }

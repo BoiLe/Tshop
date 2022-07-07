@@ -9,10 +9,10 @@
           <span class="text-header-1 text-neutral-1-900 font-semibold">Đánh giá shop</span>
       </div>     
      <div class="flex justify-between px-4 items-center">  
-            <tds-filter-status  (ngModelChange)="onModelChange($event)" (selectChange)="onSelectChange($event)">
+            <tds-filter-status    [(ngModel)]='star' (selectChange)="onSelectChangeRating($event)">
                 <ng-template ngFor let-item [ngForOf]="lstStar" let-i="index">
-                    <tds-filter-status-item [name]='item.name' 
-                        [value]="item.value">
+                    <tds-filter-status-item [name]='item.name' [count]='item.count'
+                        [value]="item.value" >
                         <ng-template tds-filter-status-template let-active='active' let-disabled="disabled" let-count='count'
                             let-name='name' let-value>                   
                             <div class="p-4 flex items-center border-b-3 border-transparent text-body-2 font-medium"
@@ -47,32 +47,29 @@
     <!-- list order -->
       <div class="bg-white w-full border  border-neutral-2-200 pb-2.5  rounded-md  overflow-hidden  flex flex-col" >
               <div class="flex items-center  justify-between px-4">
-                <tds-filter-status [ngModel]='1'  (selectChange)="onSelectChange($event)">
-
-                    <tds-filter-status-item name='Tất cả' [value]='1' [count]='10'>      
+                <tds-filter-status [ngModel]='status'  (selectChange)="onSelectChangeStatus($event)">
+                  <ng-template ngFor let-item [ngForOf]="lstStatus" let-i="index">
+                    <tds-filter-status-item [name]='item.name' [count]='item.count'
+                    [value]="item.value" >      
                     </tds-filter-status-item>
-                
-                    <tds-filter-status-item name='Chưa xử lý' [value]='2' [count]='20'>       
-                    </tds-filter-status-item>   
-                
-                    <tds-filter-status-item name='Đã xử lý' [value]='3' [count]='20' >       
-                    </tds-filter-status-item>   
-                
+                  </ng-template>
+                    
                 </tds-filter-status>
               <tds-form-field >
                       <input
                         class="w-96"
                         tdsInput
+                        [tdsInputDebounce]="750"
                         autocomplete="off"
                         [(ngModel)]="filetername"
                         placeholder="Tìm kiếm"             
                         [required]="true"
-                        (inputKeyup)="searchCustomerName()"/>
+                        (inputKeyup)="searchName()"/>
                       <span tdsPrefix><i class="tdsi-search-fill"></i></span> 
                     </tds-form-field>     
               </div>
               <div class="w-full h-full">
-                <tds-table showSizeChanger #sortTable [listData]="reviews" [loading]="loading"  [(pageSize)]="pageSize" [(pageIndex)]="pageIndex"   [scroll]="{y:'auto'}" [pageSize]="13" >
+                <tds-table showSizeChanger #sortTable [total]="total" (queryParams)="onQueryParamsChange($event)" [listData]="reviews" [frontPagination]="false" [loading]="loading"  [(pageSize)]="pageSize" [(pageIndex)]="pageIndex"   [scroll]="{y:'auto'}"  >
                   <thead >
                       <tr>
                           

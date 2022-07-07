@@ -1,3 +1,5 @@
+import { TDSSafeAny } from "tds-ui/shared/utility"
+
 export interface ReviewShopDTO {
     creationTime: Date
     creatorId: String
@@ -31,4 +33,22 @@ export interface DataReviewDTO {
     items: ReviewShopDTO[]
     totalCount:number
   }
-  
+  export interface FilterStatusItemDTO {
+    name: string;
+    value: TDSSafeAny,  
+    count: number,
+    disabled: boolean,
+  }
+
+  export interface FilterStarItemDTO {
+    name: string;
+    value: TDSSafeAny,
+    count: number,
+    disabled: boolean,
+  }
+  export interface DataRequestDTO {
+    maxResultCount?: number,
+    skipCount?: number,
+    sorting?:string,
+    filter?: string,
+}

@@ -1,12 +1,14 @@
+import { NumberInput } from '@angular/cdk/coercion';
 import { Component, OnInit } from '@angular/core';
 import { DataReviewDTO, ReviewShopDTO } from 'src/app/model/review.model';
 import { ReviewService } from 'src/app/services/review.service';
 import { TDSSafeAny } from 'tds-ui/shared/utility';
+import { TDSTableQueryParams } from 'tds-ui/table';
 
 interface FilterStatusItemDTO {
   name: string;
   value: TDSSafeAny,
-  count?: number,
+  count: number | null,
   disabled?: boolean,
 }
 
@@ -25,44 +27,53 @@ export class ReviewStoreComponent implements OnInit {
   star = 0;
   filetername=''
   value: number = 0;
+  pageSize = 10;
+  pageIndex = 1;
+  status = 0;
+  rating = 0;
+  starFilterReview = 0;
+  shopId: TDSSafeAny;
   lstStar: Array<FilterStatusItemDTO> = [
     {
       name: 'Tất cả',
       value: 0,
-      count: 100,
+      count: 0,
       disabled: false
     },
     {
       name: '1',
       value: 1,
-      count: 20,
+      count: 0,
       disabled: false
     },
     {
       name: '2',
       value: 2,
-      count: 60,
+      count: 0,
       disabled: false
     },
     {
       name: '3',
       value: 3,
-      count: 20,
+      count: 0,
       disabled: false
     },
     {
       name: '4',
       value: 4,
-      count: 20,
+      count: 0,
       disabled: false
     },
 
     {
       name: '5',
       value: 5,
-      count: 20,
-      disabled: true
+      count: 0,
+      disabled: false
     },
+  ]
+  lstStatus:Array<FilterStatusItemDTO> = [
+   
   ]
   productData = [
     {
@@ -105,217 +116,33 @@ export class ReviewStoreComponent implements OnInit {
     },
     
   ]
-  listOfData = [
-      {
-          id: 1,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          review: 5,
-          img: {
-            1:"../../../../assets/Rectangle 1671.png",
-            2:"../../../../assets/Rectangle 1671.png",
-          },
-          content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-          Date:"30/08/2021",
-          Status: 'Đã trả lời',
-      },
-      {
-          id: 2,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            1:"../../../../assets/Rectangle 1671.png",
-            2:"../../../../assets/Rectangle 1671.png",
-          },
-          review: 4,
-          content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-          Date:"30/08/2021",
-          Status: 'Đã ẩn',
-      },
-      {
-          id: 3,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            
-          },
-          review: 3,
-          content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, nói chuyện rất dễ thương, rep tin nhắn nhanh nhẹn, Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, Shop trả lời rất nhiệt tình, giải đáp thắc...',
-          Date:"30/08/2021",
-          Status: 'Chưa trả lời',
-      },
-      {
-          id: 4,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            
-          },
-          review: 2,
-          content: 'ẻ',
-          Date:"30/08/2021",
-          Status: 'Chưa trả lời',
-      },
-      {
-          id: 5,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            
-          },
-          review: 1,
-          content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-          Date:"30/08/2021",
-          Status: 'Chưa trả lời',
-      },
-      {
-          id: 6,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            
-          },
-          review: 5,
-          content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-          Date:"30/08/2021",
-          Status: 'Chưa trả lời',
-      },
-      {
-          id: 7,
-          Customer: "Sun Happy",
-          Phone:"012312321",
-          img: {
-            
-          },
-          review: 5,
-          content: '',
-          Date:"30/08/2021",
-          Status: 'Chưa trả lời',
-      },
-      {
-        id: 8,
-        Customer: "Sun Happy",
-        Phone:"012312321",
-        img: {
-            
-        },
-        review: 4,
-        content: '',
-        Date:"30/08/2021",
-        Status: 'Đã ẩn',
-    },
-    {
-      id: 9,
-      Customer: "Sun Happy",
-      Phone:"012312321",
-      img: {
-            
-      },
-      review: 4,
-      content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-      Date:"30/08/2021",
-      Status: 'Đã ẩn',
-  },
-  {
-    id: 10,
-    Customer: "Sun Happy",
-    Phone:"012312321",
-    img: {
-            
-    },
-    review: 4,
-    content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ',
-    Date:"30/08/2021",
-    Status: 'Đã ẩn',
-},
-  {
-    id: 11,
-    Customer: "Sun Happy",
-    Phone:"012312321",
-    img: {
-            
-    },
-    review: 4,
-    content: 'Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, nói chuyện rất dễ thương, rep tin nhắn nhanh nhẹn, Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, Shop trả lời rất nhiệt tình, giải đáp thắc mắc vui vẻ, Shop trả lời rất nhiệt tình, giải đáp thắc...',
-    Date:"30/08/2021",
-    Status: 'Đã ẩn',
-  },
-      
-  ];
-  tabsIcon2 = [
-    {
-      name: 'Tất cả',
-      count: 99,
-      content: "Content of Tab Pane 1"
-    },
-    {
-      name: 'Chờ xác nhận',
-      count: 85,
-      content: "Content of Tab Pane 2"
-    },
-    {
-      name: 'Chờ lấy hàng',
-      count: 80,
-      content: "Content of Tab Pane 3"
-    },
-    {
-      name: 'Đang giao',
-      count: 99,
-      content: "Content of Tab Pane 1"
-    },
-    {
-      name: 'Đã giao',
-      count: 85,
-      content: "Content of Tab Pane 2"
-    },
-    {
-      name: 'Đã hủy',
-      count: 80,
-      content: "Content of Tab Pane 3"
-    }
-  ];
+
+  
   constructor(
     private  ReviewService: ReviewService
   ) { }
-  pageSize = 20;
-  pageIndex = 1;
-  status = 0;
-  rating = 0;
-  
+ 
 
   ngOnInit(): void {
-   this.searchCustomerName()
+    this.loadStatusReview(this.shopId)
   }
-  onSelectChange(value: TDSSafeAny) {
-    
-    console.log('selectChange',value)
-  }
+
   onModelChange(value: TDSSafeAny) {
 
     console.log('ngModelChange', value)
   }
-  onChange(e: any) {
-    console.log(e);
-  }
-  onFocus(e: any){
-      console.log("onFocus",e)
-  }
-  onBlur(e: any){
-      console.log("onBlur",e)
-  }
-  onKeyDown(e: any){
-      console.log("onKeyDown",e)
-  }
-  onItemHover(e: any){
-      console.log("onItemHover",e)
+
+  onSelectChangeRating(value: number) {
+    this.resetPage()
+    this.star = value
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername, value ,this.status)
   }
 
-  getListStore(pageIndex: number, pageSize: number, searchOfText?: string,):any {
+  getListStore(pageIndex: number, pageSize: number, filetername:string, star:number, status: number):any {
     this.loading=true
-    if(localStorage.getItem('accessToken')){
-      this.ReviewService.getReviewShopList(pageIndex, pageSize, searchOfText).subscribe(
+    
+      this.ReviewService.getReviewShopList(pageIndex, pageSize, filetername, star, status).subscribe(
         (res: DataReviewDTO) => {
-         
           if (res) {
             this.reviews  = res.items;
             this.total = res.totalCount;
@@ -330,18 +157,59 @@ export class ReviewStoreComponent implements OnInit {
           this.reviews = [];
           this.total = 0;
         }) 
-        }
+        
         
       }
       
+    // phân trang
+  onQueryParamsChange(params: TDSTableQueryParams): void {
+    const { pageSize, pageIndex } = params;
   
-  searchCustomerName() {
-    
-    this.resetPage()
-    this.getListStore(this.pageIndex, this.pageSize, this.filetername)
+    this.getListStore(pageIndex, pageSize, this.filetername, this.star, this.status);
   }
-   // reset page
+  searchName() {
+    
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername, this.star, this.status)
+  }
+  
+  
    resetPage() {
     this.pageIndex = 1;
   }
+   
+   onSelectChangeStatus(value: number) {
+    this.resetPage()
+    this.status = value
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername,  this.star, value)
+  }
+ 
+ loadStatusReview(shopId: any) {
+  let rating = this.star > 0 ? [this.star] : [];
+  this.ReviewService.getListStatusForShop({ ShopId: shopId, Rating: rating }).subscribe(res => {
+   
+    if (res) {
+      let lstStatus = res.map((item: any) => {
+        return {
+          name: item.text,
+          value: item.value,
+          count: item.count,
+          disabled: false
+        }
+      }).filter((f: any) => f.value > 0);
+      let countAll = 0;
+      lstStatus.forEach((f: any) => {
+        countAll += f.count;
+      });
+      this.lstStatus = [
+        {
+          name: 'Tất cả',
+          value: 0,
+          count: countAll,
+          disabled: false
+        },
+        ...lstStatus
+      ]
+    }
+  })
+}
 }
