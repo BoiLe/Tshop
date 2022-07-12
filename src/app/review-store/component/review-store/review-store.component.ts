@@ -1,5 +1,6 @@
 import { NumberInput } from '@angular/cdk/coercion';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { DataReviewDTO, ReviewShopDTO } from 'src/app/model/review.model';
 import { ReviewService } from 'src/app/services/review.service';
 import { TDSSafeAny } from 'tds-ui/shared/utility';
@@ -19,20 +20,24 @@ interface FilterStatusItemDTO {
   host: { class: 'h-full flex flex-col overflow-hidden ' },
 })
 export class ReviewStoreComponent implements OnInit {
-  
+ 
   expandSet = new Set<number>();
   reviews:ReviewShopDTO[]=[];
   loading = true;
   total = 0;
   star = 0;
+  filter=''
   filetername=''
   value: number = 0;
   pageSize = 10;
   pageIndex = 1;
   status = 0;
   rating = 0;
+  totalRating=0;
+  shopId = localStorage.getItem('shopid')
   starFilterReview = 0;
-  shopId: TDSSafeAny;
+  message:string = ''
+
   lstStar: Array<FilterStatusItemDTO> = [
     {
       name: 'Tất cả',
@@ -122,10 +127,13 @@ export class ReviewStoreComponent implements OnInit {
     private  ReviewService: ReviewService
   ) { }
  
-
+    reload$ = new BehaviorSubject<boolean>(true)
   ngOnInit(): void {
+    this.ReviewService.ReviewSubject$
     this.loadStatusReview(this.shopId)
+    
   }
+ 
 
   onModelChange(value: TDSSafeAny) {
 
@@ -137,12 +145,16 @@ export class ReviewStoreComponent implements OnInit {
     this.star = value
     this.getListStore(this.pageIndex, this.pageSize, this.filetername, value ,this.status)
   }
-
+   
+  
   getListStore(pageIndex: number, pageSize: number, filetername:string, star:number, status: number):any {
-    this.loading=true
     
-      this.ReviewService.getReviewShopList(pageIndex, pageSize, filetername, star, status).subscribe(
+    
+    this.loading=true
+    this.ReviewService.getReviewShopList(pageIndex, pageSize, filetername, star, status)
+    .subscribe(
         (res: DataReviewDTO) => {
+
           if (res) {
             this.reviews  = res.items;
             this.total = res.totalCount;
@@ -158,58 +170,75 @@ export class ReviewStoreComponent implements OnInit {
           this.total = 0;
         }) 
         
+    
         
-      }
-      
+      }   
     // phân trang
   onQueryParamsChange(params: TDSTableQueryParams): void {
     const { pageSize, pageIndex } = params;
   
     this.getListStore(pageIndex, pageSize, this.filetername, this.star, this.status);
   }
-  searchName() {
-    
-    this.getListStore(this.pageIndex, this.pageSize, this.filetername, this.star, this.status)
-  }
   
   
-   resetPage() {
+  resetPage() {
     this.pageIndex = 1;
+    this.loadStatusReview(this.shopId)
   }
-   
-   onSelectChangeStatus(value: number) {
+  ngOnChanges(): void {
+    this.loadStatusReview(this.shopId);
+  }
+  onSelectChangeStatus(value: number) {
     this.resetPage()
     this.status = value
     this.getListStore(this.pageIndex, this.pageSize, this.filetername,  this.star, value)
   }
- 
- loadStatusReview(shopId: any) {
-  let rating = this.star > 0 ? [this.star] : [];
-  this.ReviewService.getListStatusForShop({ ShopId: shopId, Rating: rating }).subscribe(res => {
-   
-    if (res) {
-      let lstStatus = res.map((item: any) => {
-        return {
-          name: item.text,
-          value: item.value,
-          count: item.count,
-          disabled: false
-        }
-      }).filter((f: any) => f.value > 0);
-      let countAll = 0;
-      lstStatus.forEach((f: any) => {
-        countAll += f.count;
-      });
-      this.lstStatus = [
-        {
-          name: 'Tất cả',
-          value: 0,
-          count: countAll,
-          disabled: false
-        },
-        ...lstStatus
-      ]
+  searchName() {
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername, this.star, this.status)
+  }
+  ongetMessage(){
+    this.getListStore(this.pageIndex, this.pageSize, this.filetername,  this.star, this.status)
+  }
+  onfilter() {
+    if(this.filter){
+      this.filetername = this.filter
+      this.searchName()
+      if(this.total==0){
+        this.ongetMessage()
+      }
     }
-  })
-}
+  }
+ loadStatusReview(shopId: any) {
+ console.log(this.shopId)
+  shopId=localStorage.getItem('shopid')
+    let rating = this.star > 0 ? [this.star] : [];
+    this.ReviewService.getListStatusForShop({ ShopId: shopId, Rating: rating }).subscribe(res => {
+     
+      if (res) {
+        let lstStatus = res.map((item: any) => {
+          return {
+            name: item.text,
+            value: item.value,
+            count: item.count,
+            disabled: false
+          }
+        }).filter((f: any) => f.value > 0);
+        let countAll = 0;
+        lstStatus.forEach((f: any) => {
+          countAll += f.count;
+        });
+        this.lstStatus = [
+          {
+            name: 'Tất cả',
+            value: 0,
+            count: countAll,
+            disabled: false
+          },
+          ...lstStatus
+        ]
+      }
+    })
+  }
+  
+
 }

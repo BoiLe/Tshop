@@ -9,7 +9,7 @@
   </div>
   <!-- body -->
   <div class="rounded-xl shadow-2xl bg-white tds-custom-scroll  overflow-auto flex flex-col">
-    <div let *ngFor="let store of stores; let i=index;" class="flex justify-between items-center p-4 border-b border-neutral-2-300" [routerLink]="['/nhan-tin/chat']">
+    <div let *ngFor="let store of stores; let i=index;" class="flex justify-between items-center p-4 border-b border-neutral-2-300" >
       <div class="flex justify-center items-center">
         <img src="../../../../assets/Avatar.png" alt="" />
         <div class="flex flex-col ml-3 justify-between">
@@ -25,7 +25,7 @@
       </div>
      
       
-      <button tds-button-flat-icon color="secondary" rounded="!rounded-full"  class="mr-2 p-2 flex items-center">
+      <button (click)="getId(store.id)" tds-button-flat-icon color="secondary" rounded="!rounded-full"  class="mr-2 p-2 flex items-center" [routerLink]="['/nhan-tin/chat']">
         <i class="tdsi-arrow-right-line"></i>
       </button>
     </div>

@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
+import { listStoreDTO, storeDTO } from 'src/app/model/store.model';
+import { ReviewService } from 'src/app/services/review.service';
+import { StoreService } from 'src/app/services/store.service';
+
 import { TDSMenuDTO, TDSMenuOptionDTO } from 'tds-ui/menu';
 import { TDSSafeAny } from 'tds-ui/shared/utility';
 
@@ -14,6 +20,7 @@ import { TDSSafeAny } from 'tds-ui/shared/utility';
 })
 
 export class LayoutAdminComponent implements OnInit {
+  @Output() clickId:TDSSafeAny =  new EventEmitter()
   isCollapsed = false;
 
   activeTab = 1;
@@ -22,13 +29,15 @@ export class LayoutAdminComponent implements OnInit {
   setActiveTab(event: TDSSafeAny) {
     this.activeTab = event;
   }
-  ngOnInit(): void { }
+  ngOnInit(): void {this.getListStore()
+    this.ReviewService.ReviewSubject$ 
+    this.clickId.emit("enit")}
   toggleCollapsed(): void {
     this.isCollapsed = !this.isCollapsed;
   }
 
   onOpenChange(e: boolean) {
-    this.isCollapsed = e;
+    this.isCollapsed = e;   
   }
 
   breakpoint: number = 500;
@@ -44,7 +53,10 @@ export class LayoutAdminComponent implements OnInit {
 
     }
   }
-  constructor() { }
+  constructor( private storeService:StoreService,
+                private router: Router,
+                private  ReviewService: ReviewService,
+              ) { }
   public DataTag: Array<TDSMenuDTO> = [
     {
       name: "Trang chủ",
@@ -309,17 +321,27 @@ export class LayoutAdminComponent implements OnInit {
 
   ]
   public contact: number = 1;
-
-  public contactOptions = [
-    { id: 1, name: 'Cty cổ phần công nghệ Trường Minh Thịnh ' },
-    { id: 2, name: 'Elvis Presley' },
-    { id: 3, name: 'Paul McCartney' },
-    { id: 4, name: 'Elton John' },
-    { id: 5, name: 'Elvis Presley' },
-    { id: 6, name: 'Paul McCartney' }
-  ]
+  stores:storeDTO[]=[]
   lstMenu2 = this.DataTag;
-
+  getListStore():any {
+      this.storeService.getStore().subscribe(
+        (res:listStoreDTO) => {
+          this.stores = [...res.items]
+        
+        },
+        err => {
+          console.log(err)
+        }
+        )
+  }
+  @Input() shopId = ''
+  onModelChange(e:TDSSafeAny)
+  {
+    this.shopId = e
+    localStorage.setItem('shopid',e)
+  }
+ 
+  public listSelected = localStorage.getItem('shopid')
   style1: TDSMenuOptionDTO =
     {
       background: 'first:bg-dark-900 bg-dark-700 ',

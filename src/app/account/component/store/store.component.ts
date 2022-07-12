@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { storeDTO } from 'src/app/model/store.model';
+import { listStoreDTO, storeDTO } from 'src/app/model/store.model';
 import { AccountService } from 'src/app/services/account.service';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -92,6 +92,7 @@ export class StoreComponent implements OnInit {
   //   },
   // ];
   stores:storeDTO[]=[];
+  storesId:number[]=[];
   constructor(
       private storeService: StoreService,
       private accountService: AccountService,
@@ -107,7 +108,7 @@ export class StoreComponent implements OnInit {
     if(localStorage.getItem('accessToken')){
 
       this.storeService.getStore().subscribe(
-        res => {
+        (res:listStoreDTO) => {
           this.stores = [...res.items]
         },
         err => {
@@ -118,5 +119,9 @@ export class StoreComponent implements OnInit {
       else {
         this.router.navigate(['/account'])
       }
+  }
+  getId(id:any):any {
+   localStorage.setItem('shopid',id)
+    
   }
 }

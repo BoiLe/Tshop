@@ -54,12 +54,12 @@
         <input tdsInput placeholder="Search" autocomplete="off" />
         <span tdsPrefix><i class="text-neutral-1-500 tdsi-search-fill"></i></span>
       </tds-form-field>
-      <tds-select class="absolute !text-neutral-1-700" valueField="id" textField="name" [data]="contactOptions">
+      <tds-select [(ngModel)]="listSelected" (ngModelChange)="onModelChange($event)"  class="absolute !text-neutral-1-700" valueField="id" textField="name" [data]="stores">
       </tds-select>
     </tds-header>
     <!-- body -->
 
-    <router-outlet></router-outlet>
+    <router-outlet  ></router-outlet>
 
 
   </div>
